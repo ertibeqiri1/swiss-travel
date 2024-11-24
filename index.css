@@ -6,7 +6,6 @@
 }
 
 
-
 .navbar{
     display: flex;
     background-color: #ff3632;
@@ -15,6 +14,7 @@
 }
 .navbar a{ /* osht per krejt linqet me "a"*/
     padding-left: 40px;
+
     
     
 }
@@ -30,9 +30,9 @@
    
 }
 .name{
-    padding-top: 38px;
-    font-size: 25px;
-    padding-left: 7px;
+    padding-top: 35px;
+    font-size: 22px;
+    padding-left: 10px;
     color: #fff;
 
 }
@@ -99,4 +99,41 @@
 
     
 
+}
+
+.photo1 img{
+width: 900px;
+margin-right: 250px;
+margin-left: 320px;
+    margin-top: 100px;
+}
+.photo1 #text1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    padding-left: 350px;
+    margin-top: -420px;
+    font-size: 30px;
+}
+.photo1 #p1{
+    margin-top: 75px;
+ margin-left: 350px ;
+ color: #fff;
+ font-size: 25px;
+}
+.photo1 .redirect1{
+    margin-left: 400px;
+    margin-top: 75px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        padding-top: 20px;
+        padding: 15px;
+        color: white;
+        border-style: solid;
+        border-color: white;
+        cursor: pointer;
+        background-color: #F01E2C;
+    
+    
+    
 }
