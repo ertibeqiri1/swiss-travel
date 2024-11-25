@@ -95,9 +95,7 @@
     float: right;
     background-color: #ff817e;
     font-size: 18px;
-    
-
-    
+ 
 
 }
 
@@ -135,5 +133,103 @@ margin-left: 320px;
         background-color: #F01E2C;
     
     
+    
+}
+
+.destination #text2{
+  margin-top: 250px;
+  margin-left: 690px;
+
+}
+.destination{
+   padding: 100px 0;
+   background: #efefef;
+}
+
+.destinacionet img{
+    border-radius: 10px;
+    width: 300px; /* gjersia e fotove */
+    cursor: pointer;
+    transition: 1s;
+    display: flex;/* */
+    margin-top: 50px;
+} 
+
+.destinacionet img:hover{ /* hover osht "kur kalon me krusor ndryshon krysori dhe fotoja" */
+transform: scale(1.1);
+}
+
+.destinacionet h4{
+    display: flex; /*  */
+    text-shadow: -2px 2px 2px #000; /* */
+    font-weight: 600px;
+    font-size: 20px;
+    position: absolute;/* */
+    top: 50%; /* */
+    left: 50%; /* */
+    transform: translate(-50%, -50%); /* */
+    color: white;
+}
+
+.destinacionet{
+  position: relative;/* */
+  margin-bottom: 30px;
+  display: flex;
+
+}
+
+.destination .fotot{
+    display: flex /* i ka qit emrat midis fotove*/
+}
+
+.destinacionet #egypt{
+width: 250px;
+margin-left: 100px;
+height: 200px;
+
+}
+
+
+.destinacionet #madrid{ /* ID thirret me # */
+    margin-left: 460px;
+    margin-top: -230px;
+    width: 250px;
+    height: 200px;
+
+}
+
+.destinacionet #berlin{
+    margin-left: 810px;
+    margin-top: -260px;
+    width: 250px;
+    height: 200px;
+}
+
+.destinacionet #rome{
+    margin-left: 1150px;
+    margin-top: -290px;
+    width: 250px;
+    height: 200px;
+}
+
+.destinacionet #eg{
+    margin-left: -470px;
+    margin-top: 20px;
+}
+
+.destinacionet #ma{
+    margin-left: -110px;
+    margin-top: -125px;
+}
+
+.destinacionet #be{
+    margin-left: 240px;
+    margin-top: -155px;
+    
+}
+
+.destinacionet #ro{
+    margin-left: 575px;
+    margin-top: -180px;
     
 }
