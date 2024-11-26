@@ -136,14 +136,19 @@ margin-left: 320px;
     
 }
 
+
+
+
 .destination #text2{
   margin-top: 250px;
   margin-left: 690px;
 
 }
 .destination{
+    margin-top: 200px;
    padding: 100px 0;
    background: #efefef;
+   
 }
 
 .destinacionet img{
@@ -151,7 +156,7 @@ margin-left: 320px;
     width: 300px; /* gjersia e fotove */
     cursor: pointer;
     transition: 1s;
-    display: flex;/* */
+    display: flex;
     margin-top: 50px;
 } 
 
@@ -160,19 +165,19 @@ transform: scale(1.1);
 }
 
 .destinacionet h4{
-    display: flex; /*  */
-    text-shadow: -2px 2px 2px #000; /* */
+    display: flex; 
+    text-shadow: -2px 2px 2px #000;
     font-weight: 600px;
     font-size: 20px;
-    position: absolute;/* */
-    top: 50%; /* */
-    left: 50%; /* */
-    transform: translate(-50%, -50%); /* */
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     color: white;
 }
 
 .destinacionet{
-  position: relative;/* */
+  position: relative;
   margin-bottom: 30px;
   display: flex;
 
