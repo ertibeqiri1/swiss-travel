@@ -102,112 +102,55 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-left: 580px;
    padding-top: 100px;
+   padding-bottom: 50px;
  }
- .slideri{
-    margin-left: 470px;
-    margin-top: 100px;
-    justify-content: center;
- }
-
- .slide{
+ #slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .slider {
+    width: 67%;
+    height: 500px;
     position: relative;
-    width: 600px;
-    height: 350px;
-    border: 3px solid #ede6d6;
-    box-shadow: 0 0 8px 2px   rgba(0,0,0,0.2);
- }
- .slide .slides{
-    width: 100%;
-    height: calc(100% - 40px) ;
-    position: relative;
+    margin: auto;
     overflow: hidden;
- }
- .slide .slides img{
-    width: 600px;
-    height: 350px;
+  }
+  .slides img {
+    width: 100%;
+    height: auto;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  img.displaySlide {
+    display: block;
+    opacity: 1;
+  }
+  .slider button {
     position: absolute;
-    object-fit: cover;
- }
- .slide .slides img:not(.active){
-    top: 0;
-    left: -100%;
- }
- span.next, span.prev{
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-padding: 14px;
-color: #eee;
-font-size: 24px;
-font-weight: bold;
-transition: 0.5s;
-border-radius: 3px;
-user-select: none;
-cursor: pointer;
-z-index: 1;
- }
-
- span.next{
-    right: 20px;
-
- }
- span.prev{
-    left: 20px;
- }
- span.next:hover, span.prev:hover{
-    background-color: #ede6d6;
-    opacity: 0.8;
-    color: #222;
- }
- .pikat{
-    position: absolute;
-    bottom: 5px;
-    z-index: 3;
-    left:50% ;
-    transform: translateX(-50%);
- }
- .pikat .pik{
-    width: 15px;
-    height: 15px;
-    margin: 0px 2px;
-    border: 3px solid #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
- }
- .pikat .active{
-    background-color:#555 ;
- }
- @keyframes next1{
-    from{
-        left: 0%;
-    }
-    to{
-        left: -100%;
-    }
- }
- @keyframes next2{
-    from{
-        left: 100%;
-    }
-    to{
-        left: 0%;
-    }
- }
-
- @keyframes prev1{
-    from{
-        left: 0%;
-    }
-    to{
-        left: 100%;
-    }
- }
- @keyframes prev2{
-    from{
-        left: -100%;
-    }
-    to{
-        left: 0%;
-    }
- }
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+  
+ 
