@@ -391,7 +391,7 @@ height: 200px;
 
 .point {
     margin-left: 650px;
-    margin-top: -150px;
+    margin-top: -140px;
 }
 
 .helpcenter h2 {
@@ -446,6 +446,11 @@ height: 200px;
     margin-top: 200px;
     margin-left: 100px;
     justify-content: space-between;
+    font-size: 20px;
+    
+}
+.social a {
+    color: white;
 }
 
 .privacy {
@@ -454,4 +459,16 @@ height: 200px;
     margin-right: 200px;
     margin-top: -20px;
 
+}
+
+.GoTop {
+    color: red;
+    margin-left: 1350px;
+}
+
+.top1 a {
+    color: red;
+    text-decoration: none;
+   
+       
 }
