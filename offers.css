@@ -153,4 +153,35 @@
     right: 0;
   }
   
+  .photo1 img{
+    width: 67%;
+    margin-right: 250px;
+    margin-left: 250px;
+        margin-top: 270px;
+
+    }
+
+    .photo1 #text1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(34, 96, 140) ;
+        padding-left: 675px;
+        margin-top: -700px;
+        font-size: 41px;
+    }
+    
+    .photo1 #text2{
+      color: rgb(34, 96, 140) ;
+        padding-left: 225px;
+        margin-top: 670px;
+        font-size: 30px;
+
+
+    }
+
+    .photo1 #p1{
+      color: rgb(34, 96, 140) ;
+      padding-left: 235px;
+      font-size: 17px;
+    }
+
  
