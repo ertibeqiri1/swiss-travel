@@ -463,12 +463,14 @@ height: 200px;
 
 .GoTop {
     color: red;
-    margin-left: 1350px;
+    
 }
 
 .top1 a {
     color: red;
     text-decoration: none;
-   
+    margin-left: 1350px;
+    position: relative; 
+    margin-bottom: 50px;
        
 }
