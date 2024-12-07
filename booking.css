@@ -150,13 +150,279 @@
         background-color: rgb(224, 223, 223);
         height: 130px;
         margin-left: 190px;
-        margin-right: 190px ;
-
- 
-       
+        margin-right: 190px ;  
     }
 
 
+    .photo3 {
+        box-shadow: 0 0 2px 1px rgba(37,73,214,0.18);
+        border: 1px solid black;
+        margin-top: 190px;
+        padding: 60px;
+        background-color: rgb(224, 223, 223);
+        height: 130px;
+        margin-left: 190px;
+        margin-right: 190px ;  
+    }
+
+    .photo3 img{
+       
+        width: 67%;
+        margin-right: 250px;
+        margin-left: -60px;
+        margin-top: -60px;
+        height: 250px;
+        width: 390px;
+            
+    }
+
+    .photo3 #text1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(220, 41, 41);
+        padding-left: 390px;
+        margin-top: -230px;
+        font-size: 23px;
+        
+    }
+    .photo3 #p1{
+        margin-top: 80px;
+     margin-left: 390px ;
+     color: rgb(220, 41, 41);
+     font-size: 20px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+
+    .photo4 img{
+       
+        width: 67%;
+        margin-right: 250px;
+        margin-left: 360px;
+        margin-top: 240px;
+        height: 650px;
+        width: 800px;
+        
+            
+    }
+
+    .photo4 #text1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #fff;
+        padding-left: 550px;
+        margin-top: -650px;
+        font-size: 41px;
+    }
+
+    .photo4 .redirect1{
+        margin-left: 710px;
+        margin-top: 500px;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+            padding-top: 20px;
+            padding: 15px;
+            color: white;
+            border-style: solid;
+            border-color: white;
+            cursor: pointer;
+            background-color: #F01E2C;
+        
+        
+        
+    }
+
+    .footer {
+
+        background-color:#F01E2C;
+        margin-top: 100px;
+        height: 700px;
+        
+    }
+    
+    .footer .links {
+        padding: 50px;
+        text-decoration: none;
+        color: white;
+    }
+    .links #ab{
+        text-decoration: none;
+        color: white;
+    }
+    .links #carer{
+        text-decoration: none;
+        color: white;
+    }
+    .links #of{
+        text-decoration: none;
+        color: white;
+    }
+    .links #boo{
+        text-decoration: none;
+        color: white;
+    }
+    .links #cu{
+        text-decoration: none;
+        color: white;
+    }
+    
+    .onlinestore h2 {
+        color: white;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-left: 50px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .onlinestore p {
+        font-size: 14px;
+        padding-left: 50px;
+        padding-top: 5px;
+        text-align: justify;
+        padding-bottom: 0;
+        color: white;
+    }
+    
+    
+    
+    
+    .website p {
+    
+        margin-left: 200px;
+        font-size: 14px;
+        padding-left: 50px;
+        padding-top: 10px;
+        text-align: justify;
+        padding-bottom: 0;
+        color: white;
+    
+    }
+    
+    .website {
+        margin-top: -120px;
+    
+    }
+    
+    .commerce p {
+    
+        font-size: 14px;
+        padding-left: 50px;
+        padding-top: 5px;
+        text-align: justify;
+        padding-bottom: 0;
+        color: white;
+    
+    }
+    
+    .commerce {
+        margin-left: 450px;
+        margin-top: -125px;
+    }
+    
+    .point h2 {
+        color: white;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-left: 50px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .point p {
+        font-size: 14px;
+        padding-left: 50px;
+        padding-top: 5px;
+        text-align: justify;
+        padding-bottom: 0;
+        color: white;
+    }
+    
+    .point {
+        margin-left: 650px;
+        margin-top: -140px;
+    }
+    
+    .helpcenter h2 {
+        color: white;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-left: 50px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .helpcenter p {
+        font-size: 14px;
+        padding-left: 50px;
+        padding-top: 5px;
+        text-align: justify;
+        padding-bottom: 0;
+        color: white;
+    }
+    
+    .helpcenter {
+        margin-left: 900px;
+        margin-top: -110px;
+    }
+    
+    .main h2 {
+        color: white;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-left: 50px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .main p {
+        font-size: 14px;
+        padding-left: 50px;
+        padding-top: 5px;
+        text-align: justify;
+        padding-bottom: 0;
+        color: white;
+    }
+    
+    .main {
+        margin-left: 1200px;
+        margin-top: -285px;
+    }
+    
+    .social {
+        color: white;
+        height: 100px;
+        margin-top: 200px;
+        margin-left: 100px;
+        justify-content: space-between;
+        font-size: 20px;
+        
+    }
+    .social a {
+        color: white;
+    }
+    
+    .privacy {
+        color: white;
+        text-align: right;
+        margin-right: 200px;
+        margin-top: -20px;
+    
+    }
+    
+    .GoTop {
+        color: red;
+        
+    }
+    
+    .top1 a {
+        color: red;
+        text-decoration: none;
+        margin-left: 1350px;
+        position: relative; 
+        margin-bottom: 50px;
+           
+    }
+  
 
     
  
