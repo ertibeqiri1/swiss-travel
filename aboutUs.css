@@ -4,93 +4,94 @@
  }
  
  .navbar{
-     display: flex;
-     background-color: #ff3632;
-     
-     
- }
- .navbar a{ /* osht per krejt linqet me "a"*/
-     padding-left: 40px;
+    display: flex;
+    background-color: #ff3632;
+    
+    
+}
+.navbar a{ /* osht per krejt linqet me "a"*/
+    padding-left: 40px;
+
+    
+    
+}
+
+
+.logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px ;
+    margin-top: 3px;
+    margin-left: -10px;
    
- }
- 
- .logo img{
-     width: 100px;
-     height: 100px;
-     border-radius: 50px ;
-     margin-top: 3px;
-     margin-left: 30px;
+   
+}
+.name{
+    padding-top: 35px;
+    font-size: 22px;
+    padding-left: 10px;
+    color: #fff;
+
+}
+.links {
+    padding-left: 500px;
+    padding-top: 40px;
+    display: flex;
+    gap: 30px;
     
+      
+}
+
+.Offers a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+
+
+}
+
+.Booking a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+
+
+}
+
+
+.about-us a {
+    
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
     
  }
- .name{
-     padding-top: 35px;
-     font-size: 22px;
-     padding-left: 10px;
-     color: #fff;
- 
- }
- .links {
-     padding-left: 500px;
-     padding-top: 40px;
-     display: flex;
-     gap: 30px;
-     
-       
- }
- 
- .Offers a {
-     text-decoration: none;
-     color: #fff;
-     font-size: 18px;
- 
- 
- }
- 
- .Booking a {
-     text-decoration: none;
-     color: #fff;
-     font-size: 18px;
- 
- 
- }
+ .Contact-Us a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+        
+}
+
+.Login button {
+    margin-top: -10px;
+    width: 150px;
+    padding: 8px 0;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 50px ; /*i jep forme ovale butonit*/
+    background: transparent;
+    color: black;
+    float: right;
+    background-color: #ff817e;
+    font-size: 18px;
  
 
- .about-us a {
-     
-     text-decoration: none;
-     color: #fff;
-     font-size: 18px;
-     
-  }
-  .Contact-Us a {
-     text-decoration: none;
-     color: #fff;
-     font-size: 18px;
-         
- }
- 
- .Login button {
-     margin-top: -10px;
-     width: 150px;
-     padding: 8px 0;
-     outline: none;
-     border: 2px solid #fff;
-     border-radius: 50px ; /*i jep forme ovale butonit*/
-     background: transparent;
-     color: black;
-     float: right;
-     background-color: #ff817e;
-     font-size: 18px;
-     margin-left: 40px;
-
-  
- 
- }
+}
 
  .section{
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: #efefef;
  } 
 
