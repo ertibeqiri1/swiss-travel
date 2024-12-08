@@ -1,0 +1,196 @@
+*{ margin: 0;
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .navbar{
+     display: flex;
+     background-color: #ff3632;
+     
+     
+ }
+ .navbar a{ /* osht per krejt linqet me "a"*/
+     padding-left: 40px;
+   
+ }
+ 
+ .logo img{
+     width: 100px;
+     height: 100px;
+     border-radius: 50px ;
+     margin-top: 3px;
+     margin-left: 3px;
+    
+    
+ }
+ .name{
+     padding-top: 35px;
+     font-size: 22px;
+     padding-left: 10px;
+     color: #fff;
+ 
+ }
+ .links {
+     padding-left: 500px;
+     padding-top: 40px;
+     display: flex;
+     gap: 30px;
+     
+       
+ }
+ 
+ .Offers a {
+     text-decoration: none;
+     color: #fff;
+     font-size: 18px;
+ 
+ 
+ }
+ 
+ .Booking a {
+     text-decoration: none;
+     color: #fff;
+     font-size: 18px;
+ 
+ 
+ }
+ 
+  .Home-tag a {
+     
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+ 
+ 
+ }
+ .about-us a {
+     
+     text-decoration: none;
+     color: #fff;
+     font-size: 18px;
+     
+  }
+  .Contact-Us a {
+     text-decoration: none;
+     color: #fff;
+     font-size: 18px;
+         
+ }
+ 
+ .Login button {
+     margin-top: -10px;
+     width: 100px;
+     padding: 8px 0;
+     outline: none;
+     border: 2px solid #fff;
+     border-radius: 50px ; /*i jep forme ovale butonit*/
+     background: transparent;
+     color: black;
+     float: right;
+     background-color: #ff817e;
+     font-size: 18px;
+  
+ 
+ }
+
+ .section{
+    width: 100%;
+    min-height: 90vh;
+    background-color: #efefef;
+ } 
+
+ .container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+ }
+
+ .content-section{
+    float: left;
+    width: 55%;
+
+ }
+
+ .foto1{
+    float: right;
+    width: 35%;
+ }
+
+ .foto1 img{
+    width: 100%;
+    height: auto;
+ }
+
+ .content-section .title{
+    text-transform: uppercase;
+    font-size: 28px;
+ }
+
+ .content-section .content h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 19px;
+ }
+
+ .content-section .content p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+ }
+
+ .content-section .content .button a{ 
+    background-color: #3d3d3d;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    
+ }
+
+ .content-section .content .button a:hover{
+    background-color: #dd1e1e;
+    color: #fff;
+
+ }
+
+ .button{
+    margin-top: 50px;
+ }
+
+ .content-section .social{
+    margin-top: 40px;
+ }
+
+ .content-section .social i{
+    color: #000000;
+    font-size: 30px;
+    padding: 0px 10px;   
+ }
+
+ .content-section .social i:hover{
+    color:#3d3d3d
+ }
+
+ .logot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 10px;
+    
+ }
+
+ .logot img{
+    width: 230px;
+    height: 180px;  
+ }
+
+ .h1 #H{
+    text-align: center;
+    margin-top: 200px;
+    color: rgb(18, 18, 106);
+    
+ }
