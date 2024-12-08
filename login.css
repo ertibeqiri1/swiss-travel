@@ -1,11 +1,9 @@
-*{ margin: 0;
-   padding: 0; 
-   font-family: Arial, Helvetica, sans-serif;
-
-
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Popins", sans-serif;
+    box-sizing: border-box;
 }
-
-
 .navbar{
     display: flex;
     background-color: #ff3632;
@@ -99,194 +97,108 @@
 
 }
 
-.photo1 img{
-width: 900px;
-margin-right: 250px;
-margin-left: 320px;
-    margin-top: 100px;
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(images/summer-background-398_994728-326.avif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
-.photo1 #text1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    padding-left: 350px;
-    margin-top: -420px;
-    font-size: 30px;
-}
-.photo1 #p1{
-    margin-top: 75px;
- margin-left: 350px ;
- color: #fff;
- font-size: 25px;
-}
-.photo1 .redirect1{
-    margin-left: 400px;
-    margin-top: 75px;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-        padding-top: 20px;
-        padding: 15px;
-        color: white;
-        border-style: solid;
-        border-color: white;
-        cursor: pointer;
-        background-color: #F01E2C;
-    
-    
-    
-}
-
-
-
-
-.destination #text2{
-  margin-top: 100px;
-  margin-left: 690px;
-  background-color: #efefef;
-
-}
-.destination{
-   
-    margin-top: 200px;
-    padding: 100px 0;
-    background-color: #efefef;
-  
-   
-}
-
-.destinacionet img{
-    border-radius: 10px;
-    width: 300px; /* gjersia e fotove */
-    cursor: pointer;
-    transition: 1s;
-    display: flex;
-    margin-top: 50px;
-    
-} 
-
-.destinacionet img:hover{ /* hover osht "kur kalon me krusor ndryshon krysori dhe fotoja" */
-transform: scale(1.1);
-}
-
-.destinacionet h4{
-    display: flex; 
-    text-shadow: -2px 2px 2px #000;
-    font-weight: 600px;
-    font-size: 20px;
+.form-box{
+    width: 90%;
+    max-width: 450px;
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
 }
-
-.destinacionet{
-  position: relative;
-  margin-bottom: 30px;
-  display: flex;
-
-}
-
-.destination .fotot{
-    display: flex /* i ka qit emrat midis fotove*/
-}
-
-.destinacionet #egypt{
-width: 250px;
-margin-left: 100px;
-height: 200px;
-
-}
-
-
-.destinacionet #madrid{ /* ID thirret me # */
-    margin-left: 460px;
-    margin-top: -230px;
-    width: 250px;
-    height: 200px;
-
-}
-
-.destinacionet #berlin{
-    margin-left: 810px;
-    margin-top: -260px;
-    width: 250px;
-    height: 200px;
-}
-
-.destinacionet #rome{
-    margin-left: 1150px;
-    margin-top: -290px;
-    width: 250px;
-    height: 200px;
-}
-
-.destinacionet #eg{
-    margin-left: -470px;
-    margin-top: 20px;
-}
-
-.destinacionet #ma{
-    margin-left: -110px;
-    margin-top: -125px;
-}
-
-.destinacionet #be{
-    margin-left: 240px;
-    margin-top: -155px;
-    
-}
-
-.destinacionet #ro{
-    margin-left: 575px;
-    margin-top: -180px;
-    
-}
-
-.adPhoto img {
- width: 900px;
- padding-left: 350px;
- margin-top: 150px;
-
-}
-
-.adPhoto #logintxt {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-left: 410px;
-    margin-top: -540px;
+.form-box h1{
     font-size: 30px;
-    color: #fff;
+    margin-bottom: 60px;
+    color: #ff817e;
+    
+    position: relative;
+}
+.form-box h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #ff817e;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
 
+} 
+.input-field{
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
 }
 
-.adPhoto #p2 {
-    padding-left: 390px;
-    margin-top: 90px;
-    color: #fff;
-    font-size: 20px; 
-
+.input-field i{
+    margin-left: 15px;
+    color: #999;
 }
-
-.adPhoto .redirect2{
-    margin-left: 400px;
-    margin-top: 75px;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-        padding-top: 20px;
-        padding: 15px;
-        color: white;
-        border-style: solid;
-        border-color: white;
-        cursor: pointer;
-        background-color: #F01E2C;
-
+form p {
+    text-align: left;
+    font-size: 13px;
+}
+form p a{
+    text-decoration: none;
+    color:#ff817e;
+}
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field button{
+    flex-basis: 48%;
+    background:#ff817e;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+.input-group{
+    height: 280px;
+}
+.btn-field button.disable{
+    background: #eaeaea;
+    color: #555;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
 }
 
 .footer {
 
     background-color:#F01E2C;
-    margin-top: 250px;
+    
     height: 700px;
     
 }
@@ -461,16 +373,3 @@ height: 200px;
 
 }
 
-.GoTop {
-    color: red;
-    
-}
-
-.top1 a {
-    color: red;
-    text-decoration: none;
-    margin-left: 1350px;
-    position: relative; 
-    margin-bottom: 50px;
-       
-}
