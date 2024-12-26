@@ -97,18 +97,7 @@
    padding-top: 100px;
    padding-bottom: 50px;
  }
- #slider-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px 30px;
-    border-radius: 5px;
-    text-align: center;
-  }
+ 
   .slider {
     width: 67%;
     height: 650px;
@@ -243,19 +232,19 @@
    .feature-box{
       
       box-shadow: 0 0 10px 1px rgba(37,73,214,0.18);
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       width: 500px;
    }
    .feature-box1{
       box-shadow: 0 0 10px 1px rgba(37,73,214,0.18);
-      margin-left: 510px;
+      margin-left: 509px;
       margin-top: -535px;
    }
    .feature-box2{
       box-shadow: 0 0 10px 1px rgba(37,73,214,0.18);
       
       margin-left: 1018px;
-      margin-top: -525px;
+      margin-top: -527px;
    }
    .creditcard img{
       width: 70%;
