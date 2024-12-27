@@ -195,11 +195,11 @@ form p a{
     display: block;
 }
 
-.footer {
+   /*FOTERI*/
+   .footer {
 
     background-color:#F01E2C;
-    
-    height: 700px;
+    height: 570px;
     
 }
 
@@ -354,8 +354,8 @@ form p a{
 
 .social {
     color: white;
-    height: 100px;
-    margin-top: 200px;
+    height:100px;
+    margin-top: 50px;
     margin-left: 100px;
     justify-content: space-between;
     font-size: 20px;
@@ -373,3 +373,16 @@ form p a{
 
 }
 
+.GoTop {
+    color: red;
+    
+}
+
+.top1 a {
+    color: red;
+    text-decoration: none;
+    margin-left: 1350px;
+    position: relative; 
+    margin-bottom: 50px;
+       
+}

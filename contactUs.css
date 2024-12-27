@@ -186,11 +186,12 @@ input:focus, textarea:focus{ /*dmth e fukoson qat siperfaqe qe dojm me shkru nto
 
 
 
-.footer {
+   /*FOTERI*/
+   .footer {
 
     background-color:#F01E2C;
-    margin-top: 0px;
-    height: 700px;
+    margin-top: 250px;
+    height: 570px;
     
 }
 
@@ -345,8 +346,8 @@ input:focus, textarea:focus{ /*dmth e fukoson qat siperfaqe qe dojm me shkru nto
 
 .social {
     color: white;
-    height: 100px;
-    margin-top: 200px;
+    height:100px;
+    margin-top: 50px;
     margin-left: 100px;
     justify-content: space-between;
     font-size: 20px;
@@ -377,7 +378,3 @@ input:focus, textarea:focus{ /*dmth e fukoson qat siperfaqe qe dojm me shkru nto
     margin-bottom: 50px;
        
 }
-
-
-
-

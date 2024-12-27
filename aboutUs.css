@@ -168,7 +168,7 @@
  }
 
  .content-section .social i:hover{
-    color:#3d3d3d
+    color:#dd1e1e;
  }
 
  .logot{
@@ -192,13 +192,12 @@
     
  }
 
-
- 
- .footer {
+   /*FOTERI*/
+   .footer {
 
     background-color:#F01E2C;
-    margin-top: 100px;
-    height: 700px;
+    margin-top: 250px;
+    height: 570px;
     
 }
 
@@ -351,16 +350,16 @@
     margin-top: -285px;
 }
 
-.social {
+.social2 {
     color: white;
-    height: 100px;
-    margin-top: 200px;
-    margin-left: 0px;
+    height:100px;
+    margin-top: 50px;
+    margin-left: 100px;
     justify-content: space-between;
     font-size: 20px;
     
 }
-.social a {
+.social2 a {
     color: white;
 }
 
@@ -384,4 +383,4 @@
     position: relative; 
     margin-bottom: 50px;
        
-}
+} 
