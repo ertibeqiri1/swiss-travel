@@ -90,6 +90,10 @@
 
 }
 
+
+
+
+
 .contact{
     min-height: 100vh;
     background-color: #fbe8e8;
@@ -190,7 +194,6 @@ input:focus, textarea:focus{ /*dmth e fukoson qat siperfaqe qe dojm me shkru nto
    .footer {
 
     background-color:#F01E2C;
-    margin-top: 250px;
     height: 570px;
     
 }

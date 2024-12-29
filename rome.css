@@ -1,0 +1,355 @@
+*{ margin: 0;
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+ 
+ 
+ }
+ 
+ 
+ .navbar{
+    display: flex;
+    background-color: #ff3632;
+    
+    
+}
+.navbar a{ /* osht per krejt linqet me "a"*/
+    padding-left: 40px;
+
+    
+    
+}
+
+
+.logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px ;
+    margin-top: 3px;
+    margin-left: -10px;
+   
+   
+}
+.name{
+    padding-top: 35px;
+    font-size: 22px;
+    padding-left: 10px;
+    color: #fff;
+
+}
+.links {
+    padding-left: 500px;
+    padding-top: 40px;
+    display: flex;
+    gap: 30px;
+    
+      
+}
+
+.Offers a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+
+
+}
+
+.Booking a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+
+
+}
+
+.about-us a {
+    
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    
+ }
+ .Contact-Us a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+        
+}
+
+.Login button {
+    margin-top: -10px;
+    width: 150px;
+    padding: 8px 0;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 50px ; /*i jep forme ovale butonit*/
+    background: transparent;
+    color: black;
+    float: right;
+    background-color: #ff817e;
+    font-size: 18px;
+    cursor: pointer;
+ 
+
+}
+
+
+.container{
+    background-image: linear-gradient(rgba(169, 169, 173, 0.426),rgba(181, 181, 182, 0.547)),url(images/rome.jpg);
+    width: 100%;
+    height: 120vh;
+    background-size: cover;
+    
+
+}
+
+.container h1 {
+    margin-bottom: 30px; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+   }
+   
+
+  .card {
+    top: 35%;
+    left: 37%;
+    background: rgba(251, 180, 180, 0.837);
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0px 8px 9px 3px rgba(255, 7, 7, 0.1);
+    text-align: center;
+    position: absolute;
+  }
+  
+  .item {
+    margin-bottom: 30px;
+  }
+  
+  .item i{
+    font-size: 31px;
+    color: #fc3734;
+  
+    }
+  
+  
+  .item span {
+    font-weight: bold;
+    display: block;
+    font-size: 17px;
+  }
+  
+  .item small {
+    text-shadow: 0px 1px 0px #000;
+    font-size: 17px;
+  }
+  
+  button {
+    background:rgb(235, 69, 69);
+    color: white;
+    border: none;
+    padding: 13px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 12px;
+  }
+  
+  
+  button:hover {
+    background: rgb(227, 51, 51);
+  }
+
+
+
+      /*FOTERI*/
+.footer {
+
+  background-color:#F01E2C;
+  height: 570px;
+  
+}
+
+.footer .links {
+  padding: 50px;
+  text-decoration: none;
+  color: white;
+}
+.links #ab{
+  text-decoration: none;
+  color: white;
+}
+.links #carer{
+  text-decoration: none;
+  color: white;
+}
+.links #of{
+  text-decoration: none;
+  color: white;
+}
+.links #boo{
+  text-decoration: none;
+  color: white;
+}
+.links #cu{
+  text-decoration: none;
+  color: white;
+}
+
+.onlinestore h2 {
+  color: white;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+
+}
+
+.onlinestore p {
+  font-size: 14px;
+  padding-left: 50px;
+  padding-top: 5px;
+  text-align: justify;
+  padding-bottom: 0;
+  color: white;
+}
+
+
+
+
+.website p {
+
+  margin-left: 200px;
+  font-size: 14px;
+  padding-left: 50px;
+  padding-top: 10px;
+  text-align: justify;
+  padding-bottom: 0;
+  color: white;
+
+}
+
+.website {
+  margin-top: -120px;
+
+}
+
+.commerce p {
+
+  font-size: 14px;
+  padding-left: 50px;
+  padding-top: 5px;
+  text-align: justify;
+  padding-bottom: 0;
+  color: white;
+
+}
+
+.commerce {
+  margin-left: 450px;
+  margin-top: -125px;
+}
+
+.point h2 {
+  color: white;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+
+}
+
+.point p {
+  font-size: 14px;
+  padding-left: 50px;
+  padding-top: 5px;
+  text-align: justify;
+  padding-bottom: 0;
+  color: white;
+}
+
+.point {
+  margin-left: 650px;
+  margin-top: -140px;
+}
+
+.helpcenter h2 {
+  color: white;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+
+}
+
+.helpcenter p {
+  font-size: 14px;
+  padding-left: 50px;
+  padding-top: 5px;
+  text-align: justify;
+  padding-bottom: 0;
+  color: white;
+}
+
+.helpcenter {
+  margin-left: 900px;
+  margin-top: -110px;
+}
+
+.main h2 {
+  color: white;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+
+}
+
+.main p {
+  font-size: 14px;
+  padding-left: 50px;
+  padding-top: 5px;
+  text-align: justify;
+  padding-bottom: 0;
+  color: white;
+}
+
+.main {
+  margin-left: 1200px;
+  margin-top: -285px;
+}
+
+.social {
+  color: white;
+  height:100px;
+  margin-top: 50px;
+  margin-left: 100px;
+  justify-content: space-between;
+  font-size: 20px;
+  
+}
+.social a {
+  color: white;
+}
+
+.privacy {
+  color: white;
+  text-align: right;
+  margin-right: 200px;
+  margin-top: -20px;
+
+}
+
+.GoTop {
+  color: red;
+  
+}
+
+.top1 a {
+  color: red;
+  text-decoration: none;
+  margin-left: 1350px;
+  position: relative; 
+  margin-bottom: 50px;
+     
+}
