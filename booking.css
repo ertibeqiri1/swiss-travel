@@ -187,6 +187,55 @@
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+    .h1{
+        text-align: center;
+        margin-top: 170px;
+        text-shadow: -1px 2px 1px #000;
+        color:  rgb(220, 41, 41);
+    }
+
+
+    .destinacionet{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap; /*mundeson qe elementet me kalu en rresht tjeter kur en rreshtin e par ska hapsir mo*/
+        align-content: center;
+        gap: 95px;
+        margin-top: 60px;
+        
+        
+     }
+
+     .destinacionet img{
+        width: 310px;
+        height: 260px; 
+        border-radius: 20px;
+        cursor: pointer;
+       
+        
+     }
+
+     .destinacionet .d1:hover{ /* hover osht "kur kalon me krusor ndryshon krysori dhe fotoja" */
+        transform: scale(1.1);
+        transition: 1s;
+        }
+
+     .destinacionet h4{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 90px;
+        margin-top: -140px;
+        color: #fff;
+        font-size: 20px;
+        text-shadow: -2px 2px 2px #000;
+        cursor: pointer;
+        
+      
+        }
+
+
 
     .photo4 img{
        
