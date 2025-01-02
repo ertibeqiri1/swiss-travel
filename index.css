@@ -4,6 +4,7 @@
 }
 
 .navbar{
+    
     display: flex;
     background-color: #ff3632;
     
@@ -468,4 +469,127 @@ height: 200px;
     margin-bottom: 50px;
        
 }
+ /* Media screen -Responsive*/
+
+ @media screen and (max-width: 1000px){
+    .navbar{
+        width: 1200px;
+    }
+
+   .navbar .links{
+    margin-left: -500px;
+    gap: 10px;
+   }
+   .photo1 img{
+    width: 720px;
+    margin-left: 150px;
+    
+   }
+   .photo1 #text1{
+    margin-left: -170px;
+   }
+   .photo1 #p1{
+    margin-left: 180px;
+   }
+   .photo1 .redirect1{
+    margin-left: 180px;
+   }
+   .destination{
+    width: 1200px;
+   }
+   .destination #text2{
+    margin-left: 420px;
+   }
+   .destinacionet #egypt{
+    margin-left: 400px;
+
+   }
+   .destinacionet #madrid{
+margin-left: 400px;
+margin-top: 10px;
+   }
+   .destinacionet #berlin{
+    margin-left: 400px;
+    margin-top: 10px;
+
+   }
+
+    .destinacionet #rome{
+        margin-left: 400px;
+        margin-top: 10px;
+    }
+    .destinacionet #eg{
+        margin-top:20px;
+        margin-left: 200px;
+    }
+    
+    .destinacionet #ma{
+        margin-top: 20px;
+        margin-left: 200px;
+    }
+    
+    .destinacionet #be{
+       margin-top:20px;
+       margin-left: 200px;
+        
+    }
+    
+    .destinacionet #ro{
+        margin-top: 20px;
+        margin-left: 200px;
+        
+    }
+    .adPhoto img{
+        margin-left: -230px;
+       
+    }
+    .adPhoto h1{
+        margin-top: 50px;
+        margin-left: -250px;
+    }
+    .adPhoto p{
+        margin-left: -230px;
+    }
+    .adPhoto .redirect2{
+        margin-left: 160px;
+    }
+    .top1 a{
+        margin-left: 10px;
+    }
+    .footer{
+        width: 1500px;
+    }
+    .onlinestore{
+        margin-left:-20px ;
+    }
+    .website{
+        margin-left:-80px ;
+    }
+    .point{
+        margin-left:28% ;
+    }
+    .commerce{
+        margin-left:18% ;
+    }
+    .helpcenter{
+        margin-left:37%;
+    }
+    .main{
+        margin-left:49% ;
+    }
+    .privacy{
+        margin-right: 45%;
+    }
+
+    
+   }
+   
+   
+  
+
+
+    
+    
+  
+
 
