@@ -2,79 +2,79 @@
    padding: 0; 
    font-family: Arial, Helvetica, sans-serif;
 }
-
-.navbar{
-    
-    display: flex;
-    background-color: #ff3632;
-    
-    
-}
-.navbar a{ /* osht per krejt linqet me "a"*/
-    padding-left: 40px;
-
-    
-    
-}
-
-
-.logo img{
+.logo{
     width: 100px;
     height: 100px;
     border-radius: 50px ;
-    margin-top: 3px;
+    margin-top: 20px;
     margin-left: -10px;
    
    
 }
-.name{
-    padding-top: 35px;
+ .name p {
+   margin-left: 125px;
+    margin-top: 40px;
     font-size: 22px;
-    padding-left: 10px;
     color: #fff;
-
 }
-.links {
-    padding-left: 500px;
-    padding-top: 40px;
+
+nav{
+    margin-top: -65px;
+    height: 120px;
+    background-color: #ff3632;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+nav ul{
+    
+    width: 100%;
+    list-style: none;
     display: flex;
-    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
     
-      
+    height: 100px;
 }
-
-.Offers a {
+nav a{
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-
-
+    display: flex;
+    align-items: center;
+    color:white;
 }
-
-.Booking a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-
-
+nav a:hover{
+    background-color: #f0f0f0;
 }
-
-
-.about-us a {
-    
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    
- }
- .Contact-Us a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-        
+nav li:first-child{
+    margin-right: auto;
 }
-
-.Login button {
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+.hideOnMobile .button {
     margin-top: -10px;
     width: 150px;
     padding: 8px 0;
@@ -86,12 +86,27 @@
     float: right;
     background-color: #ff817e;
     font-size: 18px;
-    
+    cursor: pointer;
  
 
 }
-.Login button:hover{
-    cursor: pointer;
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .sidebar a{
+        color: black;
+    }
+    
+
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
 }
 
 .photo1 img{
@@ -287,6 +302,7 @@ height: 200px;
 }
 
 .footer .links {
+    
     padding: 50px;
     text-decoration: none;
     color: white;
@@ -471,118 +487,548 @@ height: 200px;
 }
  /* Media screen -Responsive*/
 
- @media screen and (max-width: 1000px){
-    .navbar{
-        width: 1200px;
+
+
+    
+   
+   @media only screen and (max-width: 1000px) and (min-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        margin-left: 400px;
+        display: block;
+    }
+    .sidebar a{
+        color: black;
+    }
+    .bar li{
+        width: 500px;
+    }
+    .photo1 img{
+        margin-left: 100px;
+        width: 600px;
+    }
+    .photo1 #text1{
+        font-size: 18px;
+        margin-top: -350px;
+        margin-left: -220px;
+    }
+    .photo1 #p1{
+       
+        font-size: 16px;
+        margin-left: 130px;
+        margin-top: 60px;
+       }
+       .photo1 .redirect1{
+        margin-left:130px;
+        margin-top: 50px;
+        padding: 10px;
+        font-size: 22px;
+       }
+       .destination #text2{
+        margin-left: 300px;
+       }
+       .destinacionet #egypt{
+        margin-left: 280px;
+    
+       }
+       .destinacionet #madrid{
+    margin-left: 280px;
+    margin-top: 10px;
+       }
+       .destinacionet #berlin{
+        margin-left: 280px;
+        margin-top: 10px;
+    
+       }
+    
+        .destinacionet #rome{
+            margin-left: 280px;
+            margin-top: 10px;
+        }
+        .destinacionet #eg{
+            margin-top:20px;
+            margin-left: 150px;
+        }
+        
+        .destinacionet #ma{
+            margin-top: 20px;
+            margin-left: 150px;
+        }
+        
+        .destinacionet #be{
+           margin-top:20px;
+           margin-left: 150px;
+            
+        }
+        
+        .destinacionet #ro{
+            margin-top: 20px;
+            margin-left: 150px;
+            
+        }
+        .advert{
+            margin-left: -300px;
+        }
+        .adPhoto img{
+           
+           width: 630px;
+           
+           
+        }
+        .adPhoto #logintxt{
+            margin-top: -370px;
+            font-size: 18px;
+            
+            
+           
+        }
+        .adPhoto #p2{
+            font-size: 16px;
+           
+           
+           
+        }
+        .adPhoto .redirect2{
+            
+            padding: 10px;
+            font-size: 22px;
+        }
+        .footer{
+            width: 1500px;
+            height: 800px;
+        }
+        .point{
+        margin-left: 600px;
+        }
+        .main{
+           margin-top: -50px;
+            margin-left: 0px;
+        }
+        .privacy{
+          margin-right:55%;
+        }
     }
 
-   .navbar .links{
-    margin-left: -500px;
-    gap: 10px;
-   }
-   .photo1 img{
-    width: 720px;
-    margin-left: 150px;
     
-   }
-   .photo1 #text1{
-    margin-left: -170px;
-   }
-   .photo1 #p1{
-    margin-left: 180px;
+   
+  
+    
+   @media only screen and (max-width: 800px) and (min-width: 500px){
+nav{
+    width: 1000px;
+
+}
+.menu-button{
+    margin-right: 250px;
+    
+}
+.sidebar{
+    width: 100%;
+}
+
+.navbar{
+height: 80px;
+}
+.photo1 img{
+    margin-left: 100px;
+    width: 600px;
+}
+.photo1 #text1{
+    font-size: 18px;
+    margin-top: -350px;
+    margin-left: -220px;
+}
+.photo1 #p1{
+   
+    font-size: 16px;
+    margin-left: 130px;
+    margin-top: 60px;
    }
    .photo1 .redirect1{
-    margin-left: 180px;
-   }
-   .destination{
-    width: 1200px;
+    margin-left:130px;
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 22px;
    }
    .destination #text2{
-    margin-left: 420px;
+    margin-left: 300px;
    }
    .destinacionet #egypt{
-    margin-left: 400px;
+    margin-left: 280px;
 
    }
    .destinacionet #madrid{
-margin-left: 400px;
+margin-left: 280px;
 margin-top: 10px;
    }
    .destinacionet #berlin{
-    margin-left: 400px;
+    margin-left: 280px;
     margin-top: 10px;
 
    }
 
     .destinacionet #rome{
-        margin-left: 400px;
+        margin-left: 280px;
         margin-top: 10px;
     }
     .destinacionet #eg{
         margin-top:20px;
-        margin-left: 200px;
+        margin-left: 150px;
     }
     
     .destinacionet #ma{
         margin-top: 20px;
-        margin-left: 200px;
+        margin-left: 150px;
     }
     
     .destinacionet #be{
        margin-top:20px;
-       margin-left: 200px;
+       margin-left: 150px;
         
     }
     
     .destinacionet #ro{
         margin-top: 20px;
-        margin-left: 200px;
+        margin-left: 150px;
         
     }
+    .advert{
+        margin-left: -300px;
+    }
     .adPhoto img{
-        margin-left: -230px;
+       
+       width: 630px;
+       
        
     }
-    .adPhoto h1{
-        margin-top: 50px;
-        margin-left: -250px;
+    .adPhoto #logintxt{
+        margin-top: -400px;
+        font-size: 18px;
+        
+        
     }
-    .adPhoto p{
-        margin-left: -230px;
+    .adPhoto #p2{
+        font-size: 16px;
+       
+       
+        
     }
     .adPhoto .redirect2{
-        margin-left: 160px;
-    }
-    .top1 a{
-        margin-left: 10px;
+       
+        padding: 10px;
+        font-size: 22px;
     }
     .footer{
-        width: 1500px;
+        height: 1150px;
     }
+    .commerce{
+        margin-left: 350px;
+    }
+    .point{
+        
+        margin-left: 500px;
+    }
+    .helpcenter{
+        margin-top: 80px;
+        margin-left:-20px;
+    }
+    .main{
+        margin-left:170px;
+    }
+    .privacy{
+      margin-right:20%;
+    }
+
+    
+
+
+
+   }
+@media only screen and (max-width: 500px) and (min-width: 400px){
+.menu-button{
+    margin-right: 30px;
+    
+}
+.sidebar{
+    width: 100%;
+}
+
+.navbar{
+height: 80px;
+}
+.photo1 img{
+    margin-left: 30px;
+    width: 350px;
+}
+.photo1 #text1{
+    font-size: 14px;
+    margin-top: -170px;
+    margin-left: -315px;
+}
+.photo1 #p1{
+   
+    font-size: 12px;
+    margin-left: 35px;
+    margin-top: 60px;
+   }
+   .photo1 .redirect1{
+    margin-left:35px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 16px;
+   }
+   .destination{
+    width: 1200px;
+   }
+   .destination #text2{
+    margin-left: 100px;
+   }
+   .destinacionet #egypt{
+    margin-left: 80px;
+
+   }
+   .destinacionet #madrid{
+margin-left: 80px;
+margin-top: 10px;
+   }
+   .destinacionet #berlin{
+    margin-left: 80px;
+    margin-top: 10px;
+
+   }
+
+    .destinacionet #rome{
+        margin-left: 80px;
+        margin-top: 10px;
+    }
+    .destinacionet #eg{
+        margin-top:20px;
+        margin-left: 50px;
+    }
+    
+    .destinacionet #ma{
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+    
+    .destinacionet #be{
+       margin-top:20px;
+       margin-left: 50px;
+        
+    }
+    
+    .destinacionet #ro{
+        margin-top: 20px;
+        margin-left: 50px;
+        
+    }
+    .advert{
+        margin-top: 50px;
+        margin-left: -290px;
+    }
+    .adPhoto img{
+       margin-top:auto ;
+       width: 350px;
+       
+    }
+    .adPhoto #logintxt{
+        margin-top: -200px;
+        margin-left: -50px;
+        font-size: 14px;
+       
+    }
+    .adPhoto #p2{
+        margin-top: 20px;
+        margin-left: -25px;
+        font-size: 12px;
+       
+        
+    }
+    .adPhoto .redirect2{
+       margin-top: 15px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+
+    .footer{
+        height: 900px;
+    }
+     
     .onlinestore{
         margin-left:-20px ;
     }
     .website{
-        margin-left:-80px ;
-    }
-    .point{
-        margin-left:28% ;
+        margin-left:-25px ;
     }
     .commerce{
-        margin-left:18% ;
+        margin-top: 50px;
+        margin-left:-20px ;
     }
+    .point{
+        margin-top: -120px;
+        margin-left:170px ;
+    }
+    
     .helpcenter{
-        margin-left:37%;
+        margin-top: 30px;
+        margin-left:-20px;
     }
     .main{
-        margin-left:49% ;
+        margin-left:170px;
     }
     .privacy{
-        margin-right: 45%;
+        font-size: 16px;
+        margin-right: 77%;
     }
+    .social{
+        margin-left: 30px;
+    }
+    
+
 
     
-   }
+}
+
+   
+    @media(max-width:400px){
+        .sidebar{
+            width: 100%;
+        }
+    
+    .navbar{
+        height: 80px;
+    }
+    .photo1 img{
+        margin-left: 30px;
+        width: 300px;
+    }
+    .photo1 #text1{
+        font-size: 14px;
+        margin-top: -170px;
+        margin-left: -315px;
+    }
+    .photo1 #p1{
+       
+        font-size: 12px;
+        margin-left: 35px;
+        margin-top: 60px;
+       }
+       .photo1 .redirect1{
+        margin-left:35px;
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 16px;
+       }
+       .destination{
+        width: 1200px;
+       }
+       .destination #text2{
+        margin-left: 50px;
+       }
+       .destinacionet #egypt{
+        margin-left: 40px;
+    
+       }
+       .destinacionet #madrid{
+    margin-left: 40px;
+    margin-top: 10px;
+       }
+       .destinacionet #berlin{
+        margin-left: 40px;
+        margin-top: 10px;
+    
+       }
+    
+        .destinacionet #rome{
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        .destinacionet #eg{
+            margin-top:20px;
+            margin-left: 30px;
+        }
+        
+        .destinacionet #ma{
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        
+        .destinacionet #be{
+           margin-top:20px;
+           margin-left: 30px;
+            
+        }
+        
+        .destinacionet #ro{
+            margin-top: 20px;
+            margin-left: 30px;
+            
+        }
+        .advert{
+            margin-left: -300px;
+        }
+        .adPhoto img{
+           
+           width: 300px;
+           
+        }
+        .adPhoto #logintxt{
+           display: flex;
+            
+        }
+        .adPhoto #p2{
+            margin-left: -30px;
+            margin-top: 350px;
+            
+            font-size: 12px;
+        }
+        .adPhoto .redirect2{
+            
+           margin-top: 20px;
+            padding: 5px;
+            font-size: 16px;
+        }
+       
+
+        .footer{
+            height: 900px;
+        }
+         
+        .onlinestore{
+            margin-left:-20px ;
+        }
+        .website{
+            margin-left:-65px ;
+        }
+        .commerce{
+            margin-top: 50px;
+            margin-left:-20px ;
+        }
+        .point{
+            margin-top: -120px;
+            margin-left:150px ;
+        }
+        
+        .helpcenter{
+            margin-top: 30px;
+            margin-left:-20px;
+        }
+        .main{
+            margin-left:150px;
+        }
+        .privacy{
+            font-size: 16px;
+            margin-right: 5%;
+        }
+        .social{
+            margin-left: 30px;
+        }
+        
+    }
+
    
    
   
