@@ -216,6 +216,8 @@
         
      }
 
+     
+
      .destinacionet .d1:hover{ /* hover osht "kur kalon me krusor ndryshon krysori dhe fotoja" */
         transform: scale(1.1);
         transition: 1s;
