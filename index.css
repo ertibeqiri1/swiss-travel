@@ -7,24 +7,27 @@
     width: 100px;
     height: 100px;
     border-radius: 50px ;
-    margin-top: 20px;
-    margin-left: -10px;
+    margin-top: 5px;
+    margin-left: -4px;
    
    
 }
  .name p {
-   margin-left: 125px;
+    
+   margin-left: 140px;
     margin-top: 40px;
     font-size: 22px;
     color: #fff;
 }
 
 nav{
-    margin-top: -65px;
-    height: 120px;
+    width: 100%;
+    margin-top: -67px;
+    height: 109px;
     background-color: #ff3632;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+
 }
+
 nav ul{
     
     width: 100%;
@@ -32,26 +35,40 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    gap: 6px;
+    margin-left: 6px;
+   
+    
+    
 }
 nav li{
     
-    height: 100px;
+    height: 94px;
+    
+    
 }
-nav a{
+nav a{ 
+
+    margin-left: 1px;
+    margin-top: 5px;
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
     display: flex;
     align-items: center;
     color:white;
+    
+    
 }
-nav a:hover{
-    background-color: #f0f0f0;
-}
+
 nav li:first-child{
     margin-right: auto;
 }
 .sidebar{
+    
     position: fixed;
     top: 0;
     right: 0;
@@ -66,11 +83,20 @@ nav li:first-child{
     align-items: flex-start;
     justify-content: flex-start;
 }
+
+ul.bar {
+    margin: 0;
+    padding: 0;
+}
+
+
 .sidebar li{
     width: 100%;
+  
 }
 .sidebar a{
     width: 100%;
+   
 }
 .menu-button{
     display: none;
@@ -110,7 +136,9 @@ nav li:first-child{
     }
 }
 
+
 .photo1 img{
+    
 width: 900px;
 margin-right: 250px;
 margin-left: 320px;
@@ -120,19 +148,19 @@ margin-left: 320px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     padding-left: 350px;
-    margin-top: -420px;
+    margin-top: -520px;
     font-size: 30px;
 }
 .photo1 #p1{
-    margin-top: 75px;
- margin-left: 350px ;
- color: #fff;
- font-size: 25px;
+    margin-top: 120px;
+    margin-left: 350px ;
+    color: #fff;
+    font-size: 25px;
 }
 .photo1 .redirect1{
-    margin-left: 400px;
-    margin-top: 75px;
-    font-size: 20px;
+    margin-left: 350px;
+    margin-top: 120px;
+    font-size: 23px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
         padding-top: 20px;
@@ -474,29 +502,190 @@ height: 200px;
 }
 
  /* Media screen -Responsive*/
+ 
+ @media only screen and (max-width: 1400px) and (min-width: 1200px){
+    
+    .homepage1{
+        margin-left: 175px;
 
- @media only screen and (max-width: 1100px) and (min-width: 1000px){
-    
-    
+    }
+
     .photo1 img{
-        width: 720px;
+        width: auto;
         margin-left: 150px;
         
     }
+
     .photo1 #text1{
+        margin-top: -360px;
         margin-left: -170px;
+        font-size: 24px;
     }
 
     .photo1 #p1{
+        margin-top: 90px;
         margin-left: 180px;
+        font-size: 20px;
+        height: 5px; /* Adjust height as needed */  
+        padding:2px;
     }
 
     .photo1 .redirect1{
         margin-left: 180px;
+        margin-top: 130px;
     }
 
     .destination{
-        width: 1010px;
+        width: auto;
+        padding-left: 100px;
+    }
+
+    .destination #text2{
+        margin-left: 420px;
+        margin-top: -50px;
+    }
+    
+    .destinacionet #egypt{
+        margin-left: 200px;   
+    }
+
+    .destinacionet #eg{
+        margin-top:20px;
+        margin-left: -90px;
+    }
+
+    .destinacionet #madrid{
+        margin-left: 200px;
+        margin-top: 60px;
+    }
+
+    .destinacionet #ma{
+        margin-top: 30px;
+        margin-left: -90px;
+    }
+
+    .destinacionet #berlin{
+        margin-left: 600px;
+        margin-top: -520px;
+    
+    }
+
+    .destinacionet #be{
+        margin-top:-410px;
+        margin-left: 300px;
+         
+     }
+
+     .destinacionet #rome{
+        margin-left: 600px;
+        margin-top: -260px;
+    }
+
+    .destinacionet #ro{
+        margin-top:-160px;
+        margin-left: 300px;    
+    }
+
+
+    .advert{
+        margin-left: 100px;
+        margin-top: -50px;
+       
+    }
+
+    .adPhoto img{
+        margin-left: -290px;
+       
+    }
+
+    .adPhoto h1{
+        margin-top: 50px;
+        margin-left: -300px;
+    }
+
+    .adPhoto p{
+        margin-left: -280px;
+    }
+
+    .adPhoto .redirect2{
+        margin-left: 110px;
+    }
+
+    .footer{
+        width: auto;
+        height: auto; 
+    }
+
+    .onlinestore{
+        margin-left:-20px ;
+    }
+    .website{
+        margin-left: 100px ;
+        margin-top: -140px;
+    }
+    
+    .point{
+        margin-left:12% ;
+        margin-top: -9%;
+    }
+
+    .commerce{
+        margin-left:45% ;
+    }
+
+    .helpcenter{
+        margin-left:61%;
+    }
+
+    .main{
+        margin-left:80% ;
+    }
+
+    .privacy{
+        margin-right: 4%;
+    }
+
+    
+   
+    
+ }
+
+
+
+
+ @media only screen and (max-width: 1200px) and (min-width: 1000px){
+    
+    
+    .photo1 img{
+        width: 500px;
+        margin-left: 265px;
+        margin-top: 100px;
+        
+    }
+    .photo1 #text1{
+        margin-left: -58px;
+        margin-top: -290px;
+        font-size: 19px;
+        
+    }
+
+    .photo1 #p1{
+        margin-left: 290px;
+        font-size: 15px;
+        margin-top: 60px;
+        height: 10px; /* Adjust height as needed */  
+        padding:2px;
+    }
+
+    .photo1 .redirect1{
+        margin-top: 110px;
+        margin-left: 290px;
+        font-size: 15px;
+    }
+
+    .destination{
+        width: auto;
+        margin-top: 140px;
     }
 
     .destination #text2{
@@ -546,7 +735,9 @@ height: 200px;
     }
 
     .adPhoto img{
-        margin-left: -290px;
+        margin-left: -270px;
+        margin-top: 40px;
+        width: 850px;
        
     }
 
@@ -564,8 +755,9 @@ height: 200px;
     }
 
     .footer{
-        width: 1007px;
+        width: auto;
         height: auto; 
+
     }
 
     .onlinestore{
