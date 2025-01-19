@@ -192,6 +192,7 @@
         margin-top: 170px;
         text-shadow: -1px 2px 1px #000;
         color:  rgb(220, 41, 41);
+        
     }
 
 
@@ -205,6 +206,7 @@
         margin-top: 60px;
         
         
+        
      }
 
      .destinacionet img{
@@ -212,8 +214,13 @@
         height: 260px; 
         border-radius: 20px;
         cursor: pointer;
+        
        
         
+     }
+
+     .destinacionet a{
+        text-decoration: none;
      }
 
      
@@ -233,6 +240,7 @@
         font-size: 20px;
         text-shadow: -2px 2px 2px #000;
         cursor: pointer;
+        
         
       
         }
