@@ -800,10 +800,17 @@ height: 200px;
  @media only screen and (max-width: 1000px) and (min-width: 800px){
     .hideOnMobile{
         display: none;
+        
     }
     .menu-button{
-        margin-left: 400px;
-        display: block;
+        margin-left: 500px;
+        display: flex;
+        width: auto;
+        
+    }
+
+    .nav{
+        margin-left:auto;
     }
     .sidebar a{
         color: black;
@@ -811,9 +818,15 @@ height: 200px;
     .bar li{
         width: 500px;
     }
+
+    .homepage1{
+        margin-left: 70px;
+    }
+    
     .photo1 img{
         margin-left: 100px;
         width: 600px;
+        margin-right: 40px;
     }
     .photo1 #text1{
         font-size: 18px;
@@ -902,18 +915,24 @@ height: 200px;
             font-size: 22px;
         }
         .footer{
-            width: 1500px;
+            width: auto;
             height: 800px;
         }
         .point{
         margin-left: 600px;
         }
         .main{
-           margin-top: -50px;
-            margin-left: 0px;
+           margin-top: -280px;
+            margin-left: 250px;
         }
+
+        .helpcenter{
+            margin-left: 10px;
+            margin-top: 100px;
+        }
+        
         .privacy{
-          margin-right:55%;
+          margin-right:25%;
         }
     }
 
@@ -921,42 +940,48 @@ height: 200px;
    
   
     
-   @media only screen and (max-width: 800px) and (min-width: 500px){
+   @media only screen and (max-width: 800px) and (min-width: 600px){
 nav{
-    width: 1000px;
+    width: auto;
 
 }
-.menu-button{
-    margin-right: 250px;
-    
-}
+
 .sidebar{
     width: 100%;
 }
 
+
+
 .navbar{
 height: 80px;
 }
+
+.homepage1{
+    width: auto;
+}
 .photo1 img{
-    margin-left: 100px;
-    width: 600px;
+    margin-left: 120px;
+    margin-right:auto;
+
+    width: 400px;
 }
 .photo1 #text1{
-    font-size: 18px;
-    margin-top: -350px;
+    font-size: 15px;
+    margin-top: -250px;
     margin-left: -220px;
+   
 }
 .photo1 #p1{
    
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 130px;
-    margin-top: 60px;
+    margin-top: 70px;
    }
    .photo1 .redirect1{
-    margin-left:130px;
-    margin-top: 50px;
+    margin-left:140px;
+    margin-top: 70px;
     padding: 10px;
-    font-size: 22px;
+    font-size: 18px;
    }
    .destination #text2{
     margin-left: 300px;
@@ -1001,22 +1026,24 @@ margin-top: 10px;
         
     }
     .advert{
-        margin-left: -300px;
+        margin-left: -240px;
+        
     }
     .adPhoto img{
        
-       width: 630px;
+       width: 500px;
        
        
     }
     .adPhoto #logintxt{
-        margin-top: -400px;
-        font-size: 18px;
+        margin-top: -320px;
+        font-size: 17px;
         
         
     }
     .adPhoto #p2{
-        font-size: 16px;
+        font-size: 13px;
+        
        
        
         
@@ -1024,7 +1051,7 @@ margin-top: 10px;
     .adPhoto .redirect2{
        
         padding: 10px;
-        font-size: 22px;
+        font-size: 18px;
     }
     .footer{
         height: 1150px;
@@ -1052,7 +1079,7 @@ margin-top: 10px;
 
 
    }
-@media only screen and (max-width: 500px) and (min-width: 400px){
+@media only screen and (max-width: 600px) and (min-width: 400px){
 .menu-button{
     margin-right: 30px;
     
@@ -1064,29 +1091,37 @@ margin-top: 10px;
 .navbar{
 height: 80px;
 }
+
+.homepage1{
+width: 250px;
+margin-left: 50px;
+
+
+}
 .photo1 img{
     margin-left: 30px;
-    width: 350px;
+    width: 320px;
+    margin-right:25px;
 }
 .photo1 #text1{
     font-size: 14px;
-    margin-top: -170px;
+    margin-top: -210px;
     margin-left: -315px;
 }
 .photo1 #p1{
    
     font-size: 12px;
     margin-left: 35px;
-    margin-top: 60px;
+    margin-top: 30px;
    }
    .photo1 .redirect1{
     margin-left:35px;
-    margin-top: 5px;
+    margin-top: 40px;
     padding: 5px;
-    font-size: 16px;
+    font-size: 15px;
    }
    .destination{
-    width: 1200px;
+    width: auto;
    }
    .destination #text2{
     margin-left: 100px;
@@ -1132,7 +1167,7 @@ margin-top: 10px;
     }
     .advert{
         margin-top: 50px;
-        margin-left: -290px;
+        margin-left: -310px;
     }
     .adPhoto img{
        margin-top:auto ;
@@ -1153,14 +1188,17 @@ margin-top: 10px;
         
     }
     .adPhoto .redirect2{
-       margin-top: 15px;
+       margin-top: 35px;
         padding: 5px;
-        font-size: 16px;
+        font-size: 15px;
+        margin-bottom: 25px;
+        
     }
 
 
     .footer{
         height: 900px;
+        margin-top: 150px;
     }
      
     .onlinestore{
@@ -1187,7 +1225,7 @@ margin-top: 10px;
     }
     .privacy{
         font-size: 16px;
-        margin-right: 77%;
+        margin-right: 22%;
     }
     .social{
         margin-left: 30px;
@@ -1210,6 +1248,7 @@ margin-top: 10px;
     .photo1 img{
         margin-left: 30px;
         width: 300px;
+        margin-right: 40px;
     }
     .photo1 #text1{
         font-size: 14px;
@@ -1229,7 +1268,7 @@ margin-top: 10px;
         font-size: 16px;
        }
        .destination{
-        width: 1200px;
+        width: 400px;
        }
        .destination #text2{
         margin-left: 50px;
