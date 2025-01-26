@@ -18,6 +18,10 @@
     
     
 }
+.Login  :hover{
+  cursor: pointer;
+  background-color:#f94a47;
+}
 
 
 .logo img{
@@ -166,7 +170,8 @@ form p a{
   justify-content: center;
 }
 .btn-field button{
-  flex-basis: 48%;
+  margin-top: 70px;
+  flex-basis: 50%;
   background:#ff817e;
   color: #fff;
   height: 40px;

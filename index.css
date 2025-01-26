@@ -83,6 +83,10 @@ nav li:first-child{
     align-items: flex-start;
     justify-content: flex-start;
 }
+.hideOnMobile button :hover{
+    cursor: pointer;
+    background-color:#f94a47;
+  }
 
 ul.bar {
     margin: 0;
@@ -114,9 +118,11 @@ ul.bar {
     background-color: #ff817e;
     font-size: 18px;
     cursor: pointer;
+
  
 
 }
+
 @media(max-width:800px){
     .hideOnMobile{
         display: none;

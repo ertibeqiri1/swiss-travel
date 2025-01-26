@@ -97,75 +97,102 @@
 }
 
 
+
 .container{
-    background-image: linear-gradient(rgba(169, 169, 173, 0.426),rgba(181, 181, 182, 0.547)),url(images/NewYork.jpg);
-    width: 100%;
-    height: 120vh;
-    background-size: cover;
-    
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(169, 169, 173, 0.426),rgba(181, 181, 182, 0.547)),url(images/sofia.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.form-box{
+  width: 90%;
+  max-width: 380px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  padding: 50px 60px 70px;
+  text-align: center;
+}
+.form-box h1{
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #ff817e;
+  position: relative;
+}
+.form-box h1::after{
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #ff817e;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+} 
+.input-field{
+  background: #eaeaea;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  max-height: 65px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+input{
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
 }
 
-.container h1 {
-    margin-bottom: 30px; 
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
-   }
-   
-
-  .card {
-    top: 35%;
-    left: 37%;
-    background: rgba(251, 180, 180, 0.837);
-    border-radius: 10px;
-    padding: 20px;
-    width: 350px;
-    box-shadow: 0px 8px 9px 3px rgba(255, 7, 7, 0.1);
-    text-align: center;
-    position: absolute;
-  }
-  
-  .item {
-    margin-bottom: 30px;
-  }
-  
-  .item i{
-    font-size: 31px;
-    color: #fc3734;
-  
-    }
-  
-  
-  .item span {
-    font-weight: bold;
-    display: block;
-    font-size: 17px;
-  }
-  
-  .item small {
-    text-shadow: 0px 1px 0px #000;
-    font-size: 17px;
-  }
-  
-  button {
-    background:rgb(235, 69, 69);
-    color: white;
-    border: none;
-    padding: 13px 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 200px;
-    margin-top: 12px;
-  }
-  
-  button:hover {
-    background: rgb(227, 51, 51);
+.input-field i{
+  margin-left: 15px;
+  color: #999;
+}
+form p {
+  text-align: left;
+  font-size: 13px;
+}
+form p a{
+  text-decoration: none;
+  color:#ff817e;
+}
+.btn-field{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-field button{
+  margin-top: 70px;
+  flex-basis: 50%;
+  background:#ff817e;
+  color: #fff;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.input-group{
+  height: 280px;
+}
+.btn-field :hover{
+    background-color:#f94a47;
   }
 
 
 
-      /*FOTERI*/
-.footer {
+
+ /*FOTERI*/
+ .footer {
 
   background-color:#F01E2C;
   height: 570px;

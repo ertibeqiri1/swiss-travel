@@ -18,6 +18,10 @@
     
     
 }
+.Login  :hover{
+  cursor: pointer;
+  background-color:#f94a47;
+}
 
 
 .logo img{
@@ -166,6 +170,7 @@ form p a{
   justify-content: center;
 }
 .btn-field button{
+  margin-top: 70px;
   flex-basis: 48%;
   background:#ff817e;
   color: #fff;
@@ -187,7 +192,7 @@ form p a{
 
 
 
- /*FOTERI*/
+ /*FOOTERI*/
  .footer {
 
   background-color:#F01E2C;
