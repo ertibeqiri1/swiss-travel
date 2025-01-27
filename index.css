@@ -341,6 +341,9 @@ height: 200px;
     padding: 50px;
     text-decoration: none;
     color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
 }
 .links #ab{
     text-decoration: none;
@@ -662,10 +665,17 @@ height: 200px;
  @media only screen and (max-width: 1200px) and (min-width: 1000px){
     
     
+    .homepage1{
+        margin-left: 60px;
+    }
+
+
+
     .photo1 img{
         width: 500px;
         margin-left: 265px;
         margin-top: 100px;
+        margin-right: auto;
         
     }
     .photo1 #text1{
@@ -809,9 +819,10 @@ height: 200px;
         
     }
     .menu-button{
-        margin-left: 500px;
+        justify-content: flex-end;
         display: flex;
         width: auto;
+        
         
     }
 
@@ -847,7 +858,7 @@ height: 200px;
        }
        .photo1 .redirect1{
         margin-left:130px;
-        margin-top: 50px;
+        margin-top: 110px;
         padding: 10px;
         font-size: 22px;
        }
@@ -894,7 +905,7 @@ height: 200px;
             
         }
         .advert{
-            margin-left: -300px;
+            margin-left: -200px;
         }
         .adPhoto img{
            
@@ -964,6 +975,7 @@ height: 80px;
 
 .homepage1{
     width: auto;
+    margin-left: 50px;
 }
 .photo1 img{
     margin-left: 120px;
@@ -1206,6 +1218,17 @@ margin-top: 10px;
         height: 900px;
         margin-top: 150px;
     }
+    
+    .footer .links {
+    
+            padding: 50px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+    }
+    
      
     .onlinestore{
         margin-left:-20px ;
