@@ -22,7 +22,7 @@ include("connect.php");
                 $email=$_SESSION['email'];
                 $query=mysqli_query($conn,"SELECT users.* FROM 'users' WHERE users.email='$email'");
                 while($row=mysqli_fetch_array($query)){
-                    echo $row ['firstName'];
+                    echo $row ['Name'];
                 }
             }
 

@@ -1,3 +1,30 @@
+<?php
+
+session_start();
+
+$errors = [
+  'login'=> $_SESSION['login_error'] ??'',
+  'register' =>$_SESSION['register_error'] ??''
+];
+$activeForm = $_SESSION['active_form'] ?? 'login';
+
+session_unset();
+
+function showError($error){
+  return !empty($error) ? "<p class 'error-message'> $error</p>" : '';
+}
+
+function isActiveForm($formName, $activeForm){
+  return $formName === $activeForm ? 'active' : '';
+}
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -49,47 +76,50 @@
 
 </div>
 
+<section class="trupi">
 <!-- PJESA E "Login/Signup " -->
-
-    <div class="container">
-        <div class="form-box">
-            <h1 id="title">Sign Up</h1>
-            <form method="post" action="register.php">
-                <div class="input-group">
-                    <div class="input-field" id="nameField">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Name">
-                        <span class="error"></span>
-
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email">
-                        <span class="error"></span>
-
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Password">
-                        <span class="error"></span>
-
-                    </div>
-                    
-                </div>
-                <div class="btn-field">
-                    <button type="button" id="signupBtn">Sign up</button>
-                    <button type="button" id="signinBtn" class="disable">Sign in</button>
-                </div>
-
+<div class="container">
+        <div class="form-box <?= isActiveForm('login', $activeform); ?>" id="login-form">
+            <form action="login_register.php" method="post">
+                <h2>Login</h2>
+                <?= showError($errors['login']);?>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="login">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showForm('register-form')">Register</a></p>
 
             </form>
+
         </div>
 
+        <div class="form-box  <?= isActiveForm('register', $activeform); ?>" id="register-form">
+            <form action="login_register.php" method="post">
+                <h2>Register</h2>
+                <?= showError($errors['register']); ?>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                
+                
+                <select name="role" required>
+                    <option value="">--Select Role--</option>
+                    <option value="user">User</option>
+                    <!--
+                    <option value="admin">Admin</option>
 
+                    -->
+                </select>
+              
+                <button type="submit" name="register">Register</button>
+                <p>Alredy have an account? <a href="#" onclick="('login-form')">Login</a></p>
+
+            </form>
+
+        </div>
     </div>
-
+    <script src="login.js"></script>
+    
+    </section>
 
 
     <!-- PJESA E "Footerit" -->
@@ -181,10 +211,10 @@
   
     </section>    
 
-
+ 
 
        
-    <script src="login.js"></script>
+  
 
 
     
