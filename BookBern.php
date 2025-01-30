@@ -1,10 +1,12 @@
+
+<?php include 'db.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiss Travel</title>
-    <link rel="stylesheet" href="BookBern.css">
+    <link rel="stylesheet" href="#">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     
 </head>
@@ -51,57 +53,25 @@
   </div>
 
   
+ 
+
+
+
     <div class="container">
-        <div class="form-box">
-            <h1 id="title">Make a Reservation</h1>
-            <form>
-                <div class="input-group">
-                    <div class="input-field" id="nameField">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Name">
-                       
-
-                    </div>
-                    <div class="input-field">
-                      <i class="fa-solid fa-user"></i>
-                      <input type="text" placeholder="Surname">
-                      
-
-                  </div>
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email">
-                        
-
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="date" placeholder="date">
-                       
-
-                    </div>
-                    <div class="input-field">
-                      <i class="fa-regular fa-credit-card"></i>
-                      <input type="tel" placeholder="Credit Card" maxlength="19">
-                      
-
-                  </div>
-                    
-                    
-                </div>
-                <div class="btn-field">
-                    <button type="button" >Book Now</button>
-                    
-                </div>
-
-
-            </form>
-        </div>
-
-
+        <h1>Make a Reservation</h1>
+        <form id="reservationForm">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="surname" placeholder="Surname" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="date" name="reservation_date" required>
+            <input type="text" name="credit_card" placeholder="Credit Card" maxlength="19" required>
+            <button type="submit">Book Now</button>
+        </form>
     </div>
+
+    
+
+
 
 
 
@@ -197,7 +167,7 @@
 
 
        
-    <script src="login.js"></script>
+   <script src="script1.js"></script>
 
 
     
