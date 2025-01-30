@@ -1,74 +1,92 @@
 <?php
+session_start();
+require_once 'config.php';
 
-$errors = [
-    'login'=> $_SESSION['login_error'] ??'',
-    'register' =>$_SESSION['register_error'] ??''
-];
- $activeForm = $_SESSION['active_form'] ?? 'login';
+class User {
+    private $db;
 
- session_unset();
-
- function showError($error){
-    return !empty($error) ? "<p class 'error-message'> $error</p>" : '';
- }
-
- function isActiveForm($formName, $activeForm){
-    return $formName === $activeForm ? 'active' : '';
- }
-
- session_start();
- require_once 'config.php';
-
- if(isset($_POST['register'])){
-    $name=$_POST['name'];
-    $email=$_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $role = $_POST['role'];
-
-    $checkEmail = $conn->query("SELECT email FROM users WHERE email = '$email'");
-    if ($checkEmail ->num_rows > 0) {
-        $_SESSION['register_error'] = 'Email is already registered!';
-        $_SESSION['active_form'] = 'register';
-    } else{
-        $conn->query("INSERT INTO users (name, email, password, role) VALUES ('$name' , '$email', '$password', '$role' )"); 
-         
+    public function __construct() {
+        $database = new Database();
+        $this->db = $database->getConnection();
     }
 
-    header("Location: login.php");
-    exit();
+    // Register a new user
+    public function register($name, $email, $password, $role) {
+        $stmt = $this->db->prepare("SELECT email FROM users WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $stmt->store_result();
 
+        if ($stmt->num_rows > 0) {
+            return "Email is already registered!";
+        }
 
+        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+        $stmt = $this->db->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $name, $email, $hashedPassword, $role);
 
-  }
+        return $stmt->execute();
+    }
 
-  if(isset($_POST['login'])){
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    
-    $result = $conn ->query("SELECT * FROM users WHERE email = '$email'");
-    if ($result ->num_rows > 0) {
-        $user = $result ->fetch_assoc();
-      if(password_verify($password, $user['password'])){
-        $_SESSION['name'] = $user ['name'];
-        $_SESSION['email'] = $user['email'];
-        
-        if ($user ['role'] === 'admin'){
+    // Login a user
+    public function login($email, $password) {
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+            if (password_verify($password, $user['password'])) {
+                return $user;
+            }
+        }
+        return false;
+    }
+}
+
+$user = new User();
+
+// Handle Registration
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $role = $_POST['role'];
+
+    $result = $user->register($name, $email, $password, $role);
+    if ($result === true) {
+        header("Location: login.php");
+        exit();
+    } else {
+        $_SESSION['register_error'] = $result;
+        $_SESSION['active_form'] = 'register';
+        header("Location: login.php");
+        exit();
+    }
+}
+
+// Handle Login
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $loggedInUser = $user->login($email, $password);
+    if ($loggedInUser) {
+        $_SESSION['name'] = $loggedInUser['name'];
+        $_SESSION['email'] = $loggedInUser['email'];
+
+        if ($loggedInUser['role'] === 'admin') {
             header("Location: admin_page.php");
-        }else{
+        } else {
             header("Location: user_page.php");
         }
         exit();
     }
-  }
 
-  $_SESSION['login_error'] = 'incorrect email or password';
-  $_SESSION['active_form'] = 'login';
-  header("Location: login.php");
-  exit();
-
-
-  }
-
-
-
+    $_SESSION['login_error'] = 'Incorrect email or password';
+    $_SESSION['active_form'] = 'login';
+    header("Location: login.php");
+    exit();
+}
 ?>

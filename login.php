@@ -11,7 +11,7 @@ $activeForm = $_SESSION['active_form'] ?? 'login';
 session_unset();
 
 function showError($error){
-  return !empty($error) ? "<p class 'error-message'> $error</p>" : '';
+  return !empty($error) ? "<p class = 'error-message'> $error</p>" : '';
 }
 
 function isActiveForm($formName, $activeForm){
@@ -79,7 +79,7 @@ function isActiveForm($formName, $activeForm){
 <section class="trupi">
 <!-- PJESA E "Login/Signup " -->
 <div class="container">
-        <div class="form-box <?= isActiveForm('login', $activeform); ?>" id="login-form">
+        <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
             <form action="login_register.php" method="post">
                 <h2>Login</h2>
                 <?= showError($errors['login']);?>
@@ -92,7 +92,7 @@ function isActiveForm($formName, $activeForm){
 
         </div>
 
-        <div class="form-box  <?= isActiveForm('register', $activeform); ?>" id="register-form">
+        <div class="form-box  <?= isActiveForm('register', $activeForm); ?>" id="register-form">
             <form action="login_register.php" method="post">
                 <h2>Register</h2>
                 <?= showError($errors['register']); ?>
@@ -111,7 +111,7 @@ function isActiveForm($formName, $activeForm){
                 </select>
               
                 <button type="submit" name="register">Register</button>
-                <p>Alredy have an account? <a href="#" onclick="('login-form')">Login</a></p>
+                <p>Alredy have an account? <a href="#" onclick="showForm('login-form')">Login</a></p>
 
             </form>
 
