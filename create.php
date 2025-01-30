@@ -1,22 +1,25 @@
 <?php
-include 'db.php';
+require_once "Reservation.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $surname = $_POST['surname'];
-    $email = $_POST['email'];
-    $reservation_date = $_POST['reservation_date'];
-    $credit_card = $_POST['credit_card'];
+    $reservation = new Reservation();
+    $success = $reservation->create($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['reservation_date'], $_POST['credit_card']);
 
-    $sql = "INSERT INTO reservations (name, surname, email, reservation_date, credit_card) 
-            VALUES ('$name', '$surname', '$email', '$reservation_date', '$credit_card')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Reservation successful!";
+    if ($success) {
+        echo "<script>
+                alert('🎉 Reservation Successful! Your ticket has been booked.');
+                window.location.href = 'booking.html';
+              </script>";
     } else {
-        echo "Error: " . $conn->error;
+        echo "<script>
+                alert('❌ Reservation Failed! Please try again.');
+                window.location.href = 'booking.html';
+              </script>";
     }
 }
 ?>
+
+
+
 
 

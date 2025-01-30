@@ -1,15 +1,11 @@
 <?php
-include 'db.php';
+require_once "Reservation.php";
 
 if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $sql = "DELETE FROM reservations WHERE id=$id";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Deleted successfully!'); window.location.href='dashboard.php';</script>";
-    } else {
-        echo "Error: " . $conn->error;
-    }
+    $reservation = new Reservation();
+    $success = $reservation->delete($_GET['id']);
+    header("Location: dashboard.php");
 }
 ?>
+
 

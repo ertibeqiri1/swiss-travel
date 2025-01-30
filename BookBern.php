@@ -1,12 +1,14 @@
 
-<?php include 'db.php'; ?>
+<?php
+require_once "Reservation.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiss Travel</title>
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="BookBern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     
 </head>
@@ -57,17 +59,25 @@
 
 
 
+ 
+
+
+
     <div class="container">
-        <h1>Make a Reservation</h1>
-        <form id="reservationForm">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="text" name="surname" placeholder="Surname" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="date" name="reservation_date" required>
-            <input type="text" name="credit_card" placeholder="Credit Card" maxlength="19" required>
-            <button type="submit">Book Now</button>
-        </form>
+    <form action="create.php" method="post">
+    <h1>Make a Reservation</h1>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="surname" placeholder="Surname" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="date" name="reservation_date" required>
+        <input type="text" name="credit_card" placeholder="Credit Card" required>
+        <button type="submit">Book Now</button>
+    </form>
     </div>
+
+    
+
+
 
     
 
