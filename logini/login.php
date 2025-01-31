@@ -41,7 +41,7 @@ function isActiveForm($formName, $activeForm){
    
  <div class="navbar">
     <div class="logo">
-       <a href="index.html"> <img src="logo.jpg" alt=""></a>
+       <a href="../index.html"> <img src="logo.jpg" alt=""></a>
 
     </div>
     <div class="name">
