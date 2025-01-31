@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Popins", sans-serif;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    background-color: #ff3632;
+    
+    
+}
+.navbar a{ /* osht per krejt linqet me "a"*/
+    padding-left: 40px;
+
+    
+    
+}
+
+
+.logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px ;
+    margin-top: 3px;
+    margin-left: -10px;
+   
+   
+}
+.name{
+    padding-top: 35px;
+    font-size: 22px;
+    padding-left: 10px;
+    color: #fff;
+
+}
+.links {
+    padding-left: 500px;
+    padding-top: 40px;
+    display: flex;
+    gap: 30px;
+    
+      
+}
+
+.Offers a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+
+
+}
+
+.Booking a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+
+
+}
+
+ .Home-tag a {
+    
+   text-decoration: none;
+   color: #fff;
+   font-size: 18px;
+
+
+}
+.about-us a {
+    
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    
+ }
+ .Contact-Us a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+        
+}
+
+.Login button {
+    margin-top: -10px;
+    width: 150px;
+    padding: 8px 0;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 50px ; /*i jep forme ovale butonit*/
+    background: transparent;
+    color: black;
+    float: right;
+    background-color: #ff817e;
+    font-size: 18px;
+ 
+
+}
+.Login  :hover{
+    cursor: pointer;
+    background-color:#f94a47;
+  }
+
+
+/*login*/
+
+.trupi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    color: #333;
+    
+    
+    }
+    
+    .container{
+        margin: 0 15px;
+        
+        
+    }
+    
+    .form-box{
+        width: 100%;
+        max-width: 450px;
+        padding: 30px;
+        background: #fa6565;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0,0.1);
+
+        
+        
+        
+        
+        
+    
+    }
+    
+    .form-box.active{
+        display: block;
+    }
+    
+    h2{
+        font-size: 34px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+    
+    }
+    
+    input,
+    select {
+        width: 100%;
+        padding: 12px;
+        background: #eee;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 20px;
+    
+    }
+    
+    button{
+        width: 100%;
+        padding: 12px;
+        background: #ed3636;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 20px;
+        transition: 0.5s;
+    
+    }
+    
+    button:hover{
+        background: #fe1111;
+    
+    }
+
+
+    
+    .p1{
+        font-size: 14.5px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    
+    .p1 a {
+        color: #ff0000;
+        text-decoration: none;
+    
+    }
+    
+    .p1 a:hover{
+        text-decoration: underline;
+    }
+    
+    .error-message{
+        padding: 12px;
+        background: #f8d7da;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #ff3632;
+        text-align: center;
+        margin-bottom: 20px;
+    
+    }
+    
+    h1{
+        font-size: 50px;
+    }
+
+    span{
+        color: #7494ec;
+    }
+
+    .box p {
+        font-size: 22px;
+    }
+
+    .box button{
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+
+   /*FOTERI*/
+   .footer {
+
+    background-color:#F01E2C;
+    height: 730px;
+    
+}
+
+.footer .links {
+    padding: 50px;
+    text-decoration: none;
+    color: white;
+}
+.links #ab{
+    text-decoration: none;
+    color: white;
+}
+.links #carer{
+    text-decoration: none;
+    color: white;
+}
+.links #of{
+    text-decoration: none;
+    color: white;
+}
+.links #boo{
+    text-decoration: none;
+    color: white;
+}
+.links #cu{
+    text-decoration: none;
+    color: white;
+}
+
+.onlinestore h2 {
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+
+}
+
+.onlinestore p {
+    font-size: 14px;
+    padding-left: 50px;
+    padding-top: 5px;
+    text-align: justify;
+    padding-bottom: 0;
+    color: white;
+}
+
+
+
+
+.website p {
+
+    margin-left: 200px;
+    font-size: 14px;
+    padding-left: 50px;
+    padding-top: 10px;
+    text-align: justify;
+    padding-bottom: 0;
+    color: white;
+
+}
+
+.website {
+    margin-top: -120px;
+
+}
+
+.commerce p {
+
+    font-size: 14px;
+    padding-left: 50px;
+    padding-top: 5px;
+    text-align: justify;
+    padding-bottom: 0;
+    color: white;
+
+}
+
+.commerce {
+    margin-left: 450px;
+    margin-top: -175px;
+}
+
+.point h2 {
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+
+}
+
+.point p {
+    font-size: 14px;
+    padding-left: 50px;
+    padding-top: 5px;
+    text-align: justify;
+    padding-bottom: 0;
+    color: white;
+}
+
+.point {
+    margin-left: 650px;
+    margin-top: -250px;
+}
+
+.helpcenter h2 {
+    color: white;
+    font-size: 15px;
+    padding-top: -120px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+
+}
+
+.helpcenter p {
+    font-size: 14px;
+    padding-left: 50px;
+    padding-top: 5px;
+    text-align: justify;
+    padding-bottom: 0;
+    color: white;
+}
+
+.helpcenter {
+    margin-left: 900px;
+    margin-top: -110px;
+}
+
+.main h2 {
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+
+}
+
+.main p {
+    font-size: 14px;
+    padding-left: 50px;
+    padding-top: 5px;
+    text-align: justify;
+    padding-bottom: 0;
+    color: white;
+}
+
+.main {
+    margin-left: 1200px;
+    margin-top: -385px;
+}
+
+.social {
+    color: white;
+    height:100px;
+    margin-top: 50px;
+    margin-left: 100px;
+    justify-content: space-between;
+    font-size: 20px;
+    
+}
+.social a {
+    color: white;
+}
+
+.privacy {
+    color: white;
+    text-align: right;
+    margin-right: 200px;
+    margin-top: -20px;
+
+}
+
+.GoTop {
+    color: red;
+    
+}
+
+.top1 a {
+    color: red;
+    text-decoration: none;
+    margin-left: 1350px;
+    position: relative; 
+    margin-bottom: 50px;
+       
+}
