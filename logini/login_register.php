@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         if ($loggedInUser['role'] === 'admin') {
             header("Location: admin_page.php");
         } else {
-            header("Location: user_page.php");
+            header("Location:../index.html");
         }
         exit();
     }

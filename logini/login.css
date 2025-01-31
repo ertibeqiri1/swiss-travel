@@ -185,20 +185,20 @@
 
 
     
-    .p1{
+    p{
         font-size: 14.5px;
         text-align: center;
         margin-bottom: 10px;
         color: #fff;
     }
     
-    .p1 a {
+    p a {
         color: #ff0000;
         text-decoration: none;
     
     }
     
-    .p1 a:hover{
+    p a:hover{
         text-decoration: underline;
     }
     
