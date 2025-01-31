@@ -82,7 +82,7 @@ function isActiveForm($formName, $activeForm){
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit" name="login">Login</button>
-                <p class="p1">Don't have an account? <a href="#" onclick="showForm('register-form')">Register</a></p>
+                <p >Don't have an account? <a href="#" onclick="showForm('register-form')">Register</a></p>
 
             </form>
 
@@ -107,7 +107,7 @@ function isActiveForm($formName, $activeForm){
                 </select>
               
                 <button type="submit" name="register">Register</button>
-                <p class="p1">Alredy have an account? <a href="#" onclick="showForm('login-form')">Login</a></p>
+                <p >Alredy have an account? <a href="#" onclick="showForm('login-form')">Login</a></p>
 
             </form>
 

@@ -25,7 +25,7 @@ class Database {
     }
 }
 
-db = new Database();
+$db = new Database();
 
 if (isset($_GET['delete'])) {
     if ($db->deleteMessage(intval($_GET['delete']))) {
