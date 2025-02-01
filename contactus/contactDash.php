@@ -45,12 +45,7 @@ $messages = $db->getMessages();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <style>
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
-        th { background-color: #f4f4f4; }
-        .delete-btn { color: red; text-decoration: none; }
-    </style>
+    
 </head>
 <body>
     <h2>Contact Messages</h2>
@@ -80,6 +75,13 @@ $messages = $db->getMessages();
     </table>
 </body>
 </html>
+
+    <style>
+        table { width: 90%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .delete-btn { color: red; text-decoration: none; }
+    </style>
 
 <?php
 $db->conn->close();

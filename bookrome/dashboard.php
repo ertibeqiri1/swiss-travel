@@ -41,7 +41,15 @@ $data = $reservation->getAll();
     </table>
 
     <br>
-    <a href="booking.html">➕ Make a New Reservation</a>
+    <a href="../booking.html">➕ Make a New Reservation</a>
 
 </body>
 </html>
+
+
+<style>
+        table { width: 90%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .delete-btn { color: red; text-decoration: none; }
+    </style>
