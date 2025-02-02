@@ -21,9 +21,11 @@ class Database {
         }
         return self::$instance;
     }
-
+/*brbrr*/
     public function getConnection() {
         return $this->conn;
     }
 }
 ?>
+
+
