@@ -10,7 +10,7 @@ class User {
         $this->db = $database->getConnection();
     }
 
-    // Regjistrimi i userit
+    // Register a new user
     public function register($name, $email, $password, $role) {
         $stmt = $this->db->prepare("SELECT email FROM users WHERE email = ?");
         $stmt->bind_param("s", $email);
@@ -24,7 +24,6 @@ class User {
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $stmt = $this->db->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $name, $email, $hashedPassword, $role);
-
         return $stmt->execute();
     }
 
@@ -47,7 +46,8 @@ class User {
 
 $user = new User();
 
-//Regjistrimi
+
+// regjistrimi
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
 
     $result = $user->register($name, $email, $password, $role);
     if ($result === true) {
-        header("Location: login.php");
+        header("Location: login.php?register_success=true");
         exit();
     } else {
         $_SESSION['register_error'] = $result;
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
     }
 }
 
-//  Logini
+// Logini
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -75,18 +75,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     if ($loggedInUser) {
         $_SESSION['name'] = $loggedInUser['name'];
         $_SESSION['email'] = $loggedInUser['email'];
+        $_SESSION['role'] = $loggedInUser['role'];
 
         if ($loggedInUser['role'] === 'admin') {
             header("Location: admin_page.php");
         } else {
-            header("Location:../index.html");
+            header("Location: ../index.html");
         }
         exit();
     }
-
     $_SESSION['login_error'] = 'Incorrect email or password';
     $_SESSION['active_form'] = 'login';
     header("Location: login.php");
     exit();
 }
-?>
