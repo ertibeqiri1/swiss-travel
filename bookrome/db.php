@@ -4,8 +4,8 @@ class Database {
     private $conn;
 
     private $host = "localhost";
-    private $username = "root"; // Change if needed
-    private $password = ""; // Change if needed
+    private $username = "root"; 
+    private $password = ""; 
     private $dbname = "rome_reservation";
 
     private function __construct() {

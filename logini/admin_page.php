@@ -49,7 +49,7 @@ if (!isset($_SESSION['email'])){
 
 </div>
 <style>
-/* General page styling */
+
 body {
     background: #f4f4f4;
     display: flex;
@@ -60,7 +60,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Centered admin box */
+
 .box {
     
     justify-content: space-between;
@@ -72,20 +72,20 @@ body {
     width: 300px;
 }
 
-/* Title Styling */
+
 .box h1 {
     font-size: 24px;
     margin-bottom: 10px;
     color: #333;
 }
 
-/* Paragraph Styling */
+
 .box p {
     font-size: 16px;
     color: #666;
 }
 
-/* Buttons Styling */
+
 button {
     width: 100%;
     padding: 10px;
@@ -99,13 +99,13 @@ button {
     transition: 0.3s ease-in-out;
 }
 
-/* Logout Button */
+
 button {
     background:rgb(130, 125, 124);
     color: white;
 }
 
-/* City Buttons */
+
 button a {
     text-decoration: none;
     color: white;
@@ -117,10 +117,10 @@ button a {
    
 }
 
-/* Different Colors for Each City */
 
 
-/* Hover Effects */
+
+
 button:hover {
     opacity: 0.8;
 }
