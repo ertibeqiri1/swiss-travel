@@ -27,7 +27,7 @@
    
    
 }
-.name{
+.name p{
     padding-top: 35px;
     font-size: 22px;
     padding-left: 10px;
@@ -267,6 +267,7 @@
 }
 
 .onlinestore h2 {
+    margin-right: 88%;
     color: white;
     font-size: 15px;
     padding-top: 20px;
@@ -321,6 +322,7 @@
 }
 
 .point h2 {
+    margin-right:80% ;
     color: white;
     font-size: 15px;
     padding-top: 20px;
@@ -344,6 +346,7 @@
 }
 
 .helpcenter h2 {
+    margin-right: 80%;
     color: white;
     font-size: 15px;
     padding-top: -120px;
@@ -367,6 +370,7 @@
 }
 
 .main h2 {
+    margin-right: 55%;
     color: white;
     font-size: 15px;
     padding-top: 20px;
