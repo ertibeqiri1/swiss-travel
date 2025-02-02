@@ -10,7 +10,7 @@ class User {
         $this->db = $database->getConnection();
     }
 
-    // Register a new user
+    // Regjistrimi userit
     public function register($name, $email, $password, $role) {
         $stmt = $this->db->prepare("SELECT email FROM users WHERE email = ?");
         $stmt->bind_param("s", $email);
@@ -46,8 +46,7 @@ class User {
 
 $user = new User();
 
-
-// regjistrimi
+// Regjistrimi
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -89,3 +88,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     header("Location: login.php");
     exit();
 }
+
