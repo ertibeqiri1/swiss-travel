@@ -10,8 +10,34 @@ class User {
         $this->db = $database->getConnection();
     }
 
-    // Regjistrimi userit
+    // Validimi me regex
+    private function validateInput($data, $pattern) {
+        return preg_match($pattern, $data);
+    }
+
+    // Regjistrimi user
     public function register($name, $email, $password, $role) {
+        // Regex kodi
+        $namePattern = "/^[A-Za-z\s]{3,30}$/"; // Name: Only letters & spaces, 3-30 characters
+        $emailPattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"; // Valid email format
+        $passwordPattern = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/"; // Min 6 chars, 1 letter, 1 number
+
+        // Validimi emrit
+        if (!$this->validateInput($name, $namePattern)) {
+            return "Name must be between 3-30 characters and contain only letters.";
+        }
+
+        // Validimi email
+        if (!$this->validateInput($email, $emailPattern)) {
+            return "Invalid email format.";
+        }
+
+        // Validimi password
+        if (!$this->validateInput($password, $passwordPattern)) {
+            return "Password must be at least 6 characters long and include a number.";
+        }
+
+        
         $stmt = $this->db->prepare("SELECT email FROM users WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -21,13 +47,15 @@ class User {
             return "Email is already registered!";
         }
 
+        
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $stmt = $this->db->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $name, $email, $hashedPassword, $role);
+        
         return $stmt->execute();
     }
 
-    // Logini i userit
+    // Login useri
     public function login($email, $password) {
         $stmt = $this->db->prepare("SELECT * FROM users WHERE email = ?");
         $stmt->bind_param("s", $email);
@@ -46,7 +74,7 @@ class User {
 
 $user = new User();
 
-// Regjistrimi
+// Regjistrimi user
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -65,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
     }
 }
 
-// Logini
+// 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -88,4 +116,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     header("Location: login.php");
     exit();
 }
-
