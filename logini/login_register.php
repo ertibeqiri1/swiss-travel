@@ -18,9 +18,9 @@ class User {
     // Regjistrimi user
     public function register($name, $email, $password, $role) {
         // Regex kodi
-        $namePattern = "/^[A-Za-z\s]{3,30}$/"; // Name: Only letters & spaces, 3-30 characters
-        $emailPattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"; // Valid email format
-        $passwordPattern = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/"; // Min 6 chars, 1 letter, 1 number
+        $namePattern = "/^[A-Za-z\s]{3,30}$/"; // 3-30 karaktere
+        $emailPattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"; // email valid
+        $passwordPattern = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/"; // Minimumi 6 karaktere
 
         // Validimi emrit
         if (!$this->validateInput($name, $namePattern)) {
