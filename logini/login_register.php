@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         $_SESSION['role'] = $loggedInUser['role'];
 
         if ($loggedInUser['role'] === 'admin') {
-            header("Location: admin_page.php");
+            header("Location: ../index.php");
         } else {
 
             $_SESSION['welcome_message'] = "Welcome, " . $_SESSION['name'] . "!";

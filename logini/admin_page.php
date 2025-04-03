@@ -42,6 +42,8 @@ if (!isset($_SESSION['email'])){
     <button><a href="../bookmadrid/dashboard.php">Madrid</a></button>
     <br>
     <button><a href="../contactus/contactDash.php">Contact Us</a></button>
+    <br>
+    <button><a href="../index.php">Project</a></button>
     <br><br>
     <button class="logout" onclick="window.location.href='logout.php'">Logout</button>
     

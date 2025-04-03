@@ -1,22 +1,14 @@
 <?php
 session_start();
 
-
 if (isset($_SESSION['welcome_message'])) {
     echo "<script>alert('" . $_SESSION['welcome_message'] . "');</script>";
     unset($_SESSION['welcome_message']); // Remove message after showing it once
 }
-
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,15 +16,14 @@ if (isset($_SESSION['welcome_message'])) {
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- PJESA E "NAVBAR" -->
-    <div class="name">
-        <p >Swiss Travel</p>
-        </div>
+<!-- NAVBAR -->
+<div class="name">
+    <p>Swiss Travel</p>
+</div>
 
-        <nav>
+<nav>
     <ul class="sidebar">
         <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
         <li><a href="offers.php">Offers</a></li>
@@ -41,10 +32,14 @@ if (isset($_SESSION['welcome_message'])) {
         <li><a href="contactus/contactUs.php">Contact Us</a></li>
 
         <?php if (isset($_SESSION['email'])): ?>
-            <!-- Show Logout button when logged in -->
+            <?php if ($_SESSION['role'] === 'admin'): ?>
+                <!-- Show Dashboard for Admins -->
+                <li><a href="adminpage.php"><button type="button" class="button">Dashboard</button></a></li>
+            <?php endif; ?>
+            <!-- Show Logout Button when Logged In -->
             <li><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
         <?php else: ?>
-            <!-- Show Login/Signup button when NOT logged in -->
+            <!-- Show Login/Signup when NOT Logged In -->
             <li><a href="logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
         <?php endif; ?>
     </ul>
@@ -57,6 +52,9 @@ if (isset($_SESSION['welcome_message'])) {
         <li class="hideOnMobile"><a href="contactus/contactUs.php">Contact Us</a></li>
 
         <?php if (isset($_SESSION['email'])): ?>
+            <?php if ($_SESSION['role'] === 'admin'): ?>
+                <li class="hideOnMobile"><a href="adminpage.php">Dashboard</button></a></li>
+            <?php endif; ?>
             <li class="hideOnMobile"><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
         <?php else: ?>
             <li class="hideOnMobile"><a href="logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
@@ -65,16 +63,21 @@ if (isset($_SESSION['welcome_message'])) {
         <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
     </ul>
 </nav>
-        <script>
-            function showSidebar(){
-                const sidebar = document.querySelector('.sidebar')
-                sidebar.style.display = 'flex'
-            }
-            function hideSidebar(){
-                const sidebar = document.querySelector('.sidebar')
-                sidebar.style.display = 'none'
-            }
-        </script>
+
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
+
 
         <!-- PJESA E PARE "Book Now" -->
     <section class="homepage1">
