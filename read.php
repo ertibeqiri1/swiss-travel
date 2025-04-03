@@ -10,6 +10,6 @@ if ($result->num_rows > 0) {
         $reservations[] = $row;
     }
 }
-
+//json_encode() shndërron të dhënat PHP në format JSON(JavaScript Object Notation)
 echo json_encode($reservations);
 ?>

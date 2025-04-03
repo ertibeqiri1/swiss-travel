@@ -2,6 +2,12 @@
 session_start();
 require_once 'config.php';
 
+if (isset($_SESSION['email'])) {
+    echo "You are already logged in as " . $_SESSION['name'] . " (" . $_SESSION['role'] . ") <br>";
+    echo '<a href="logout.php"><button>Logout</button></a>';
+    exit(); // Stop execution since user is already logged in
+}
+
 class User {
     private $db;
 
@@ -107,7 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         if ($loggedInUser['role'] === 'admin') {
             header("Location: admin_page.php");
         } else {
-            header("Location: ../index.html");
+
+            $_SESSION['welcome_message'] = "Welcome, " . $_SESSION['name'] . "!";
+            header("Location: ../index.php");
         }
         exit();
     }

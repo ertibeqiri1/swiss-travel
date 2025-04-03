@@ -1,5 +1,12 @@
 
+<?php
+session_start();
 
+if (isset($_SESSION['welcome_message'])) {
+    echo "<script>alert('" . $_SESSION['welcome_message'] . "');</script>";
+    unset($_SESSION['welcome_message']); // Remove message after showing it once
+}
+?>
 
 
 
@@ -16,40 +23,43 @@
 <body>
      <!-- PJESA E "NAVBAR" -->
    
- <div class="navbar">
-    <div class="logo">
-       <a href="../index.html"> <img src="logo.jpg" alt=""></a>
-  
-    </div>
-    <div class="name">
-        <p>Swiss Travel</p>
-    </div>
-    <div class="links">
-        <div class="Offers">
-            <a href="../offers.html">Offers</a>
+     <div class="name">
+        <p >Swiss Travel</p>
         </div>
-  
-        <div class="Booking">
-            <a href="../booking.html">Booking</a>
-        </div>
-  
-          <div class="about-us">
-              <a href="../aboutUs.html">About Us</a>
-          </div>
 
-  
-        <div class="Contact-Us">
-            <a href="#">Contact Us</a>
-        </div>
-  
-        <div class="Login">
-            <a href="../logini/login.php"><button type="button" class="button"> Login/Signup</button></a>
-  
-        </div>
-    </div>
- </div>
+        <nav>
+    <ul class="sidebar">
+        <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
+        <li><a href="../offers.php">Offers</a></li>
+        <li><a href="../booking.php">Booking</a></li>
+        <li><a href="../aboutUs.php">About Us</a></li>
+        <li><a href="contactus/contactUs.php">Contact Us</a></li>
 
+        <?php if (isset($_SESSION['email'])): ?>
+            <!-- Show Logout button when logged in -->
+            <li><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
+        <?php else: ?>
+            <!-- Show Login/Signup button when NOT logged in -->
+            <li><a href="logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
+        <?php endif; ?>
+    </ul>
 
+    <ul class="bar">
+        <li><a href="../index.php"><img class="logo" src="logo.jpg" alt=""></a></li>
+        <li class="hideOnMobile"><a href="../offers.php">Offers</a></li>
+        <li class="hideOnMobile"><a href="../booking.php">Booking</a></li>
+        <li class="hideOnMobile"><a href="../aboutUs.php">About Us</a></li>
+        <li class="hideOnMobile"><a href="contactus/contactUs.php">Contact Us</a></li>
+
+        <?php if (isset($_SESSION['email'])): ?>
+            <li class="hideOnMobile"><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
+        <?php else: ?>
+            <li class="hideOnMobile"><a href="logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
+        <?php endif; ?>
+
+        <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+    </ul>
+</nav>
  <!-- PJESA E "contactUs" -->
 
  <section class="contact">

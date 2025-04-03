@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (event) {
             let valid = true;
 
-            
+            //e marrim vleren e name, emailit edhe passwordit
             let name = form.querySelector("input[name='name']");
             let email = form.querySelector("input[name='email']");
             let password = form.querySelector("input[name='password']");

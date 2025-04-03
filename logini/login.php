@@ -1,26 +1,39 @@
 <?php
-
 session_start();
 
+// Prevent browser caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+// If already logged in, redirect to index.php
+if (isset($_SESSION['email'])) {
+    header("Location: ../index.php");
+    exit();
+}
+
 $errors = [
-  'login'=> $_SESSION['login_error'] ??'',
-  'register' =>$_SESSION['register_error'] ??''
+  'login' => $_SESSION['login_error'] ?? '',
+  'register' => $_SESSION['register_error'] ?? ''
 ];
+
 $activeForm = $_SESSION['active_form'] ?? 'login';
 
-session_unset();
+// Clear session errors after storing them in variables
+unset($_SESSION['login_error']);
+unset($_SESSION['register_error']);
+unset($_SESSION['active_form']);
 
-function showError($error){
-  return !empty($error) ? "<p class = 'error-message'> $error</p>" : '';
+function showError($error) {
+    return !empty($error) ? "<p class='error-message'>$error</p>" : '';
 }
 
-function isActiveForm($formName, $activeForm){
-  return $formName === $activeForm ? 'active' : '';
+function isActiveForm($formName, $activeForm) {
+    return $formName === $activeForm ? 'active' : '';
 }
-
-
-
 ?>
+
+
 
 
 
@@ -76,7 +89,7 @@ function isActiveForm($formName, $activeForm){
 <!-- PJESA E "Login/Signup " -->
 <div class="container">
         <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
-            <form action="login_register.php" method="post">
+            <form action="login_register.php" method="post" autocomplete="off">
                 <h2>Login</h2>
                 <?= showError($errors['login']);?>
                 <input type="email" name="email" placeholder="Email" required>
@@ -204,7 +217,11 @@ function isActiveForm($formName, $activeForm){
       </div>
   
   
-    </section>    
+    </section>   
+    <script>
+    window.history.replaceState(null, "", window.location.href);
+</script>
+ 
 
  
 
