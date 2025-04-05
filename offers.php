@@ -42,7 +42,7 @@ if (isset($_SESSION['welcome_message'])) {
 </ul>
 
 <ul class="bar">
-    <li><a href="index.html"><img class="logo" src="images/logo.jpg" alt=""></a></li>
+    <li><a href="index.php"><img class="logo" src="images/logo.jpg" alt=""></a></li>
     <li class="hideOnMobile"><a href="offers.php">Offers</a></li>
     <li class="hideOnMobile"><a href="booking.php">Booking</a></li>
     <li class="hideOnMobile"><a href="aboutUs.php">About Us</a></li>
@@ -212,7 +212,7 @@ if (isset($_SESSION['welcome_message'])) {
                 </div>
                 <div class="swiss">
                     <img src="images/swiss.png" alt="">
-                   <a href="booking.html"> <button  class="redirect3">Book now</button></a>
+                   <a href="booking.php"> <button  class="redirect3">Book now</button></a>
 
                 </div>
 

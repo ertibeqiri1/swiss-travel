@@ -62,15 +62,15 @@ function isActiveForm($formName, $activeForm) {
         </div>
     <div class="links">
         <div class="Offers">
-            <a href="../offers.html">Offers</a>
+            <a href="../offers.php">Offers</a>
         </div>
   
         <div class="Booking">
-            <a href="../booking.html">Booking</a>
+            <a href="../booking.php">Booking</a>
         </div>
   
           <div class="about-us">
-              <a href="../aboutUs.html">About Us</a>
+              <a href="../aboutUs.php">About Us</a>
           </div>
   
         <div class="Contact-Us">

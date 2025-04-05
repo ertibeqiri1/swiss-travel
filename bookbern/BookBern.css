@@ -6,95 +6,126 @@
  }
  
  
- .navbar{
-    display: flex;
-    background-color: #ff3632;
-    
-    
+ .logo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px ;
+  margin-top: 5px;
+  margin-left: -4px;
+ 
+ 
 }
-.navbar a{ /* osht per krejt linqet me "a"*/
-    padding-left: 40px;
+.name p {
+  
+ margin-left: 140px;
+  margin-top: 40px;
+  font-size: 22px;
+  color: #fff;
+}
 
-    
-    
+nav{
+  width: 100%;
+  margin-top: -67px;
+  height: 109px;
+  background-color: #ff3632;
+
 }
-.Login  :hover{
+
+nav ul{
+  
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  gap: 6px;
+  margin-left: 6px;
+ 
+  
+  
+}
+nav li{
+  
+  height: 94px;
+  
+  
+}
+nav a{ 
+
+  margin-left: 1px;
+  margin-top: 5px;
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color:white;
+  
+  
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+.sidebar{
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.hideOnMobile button :hover{
   cursor: pointer;
   background-color:#f94a47;
 }
 
-
-.logo img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px ;
-    margin-top: 3px;
-    margin-left: -10px;
-   
-   
-}
-.name{
-    padding-top: 35px;
-    font-size: 22px;
-    padding-left: 10px;
-    color: #fff;
-
-}
-.links {
-    padding-left: 500px;
-    padding-top: 40px;
-    display: flex;
-    gap: 30px;
-    
-      
+ul.bar {
+  margin: 0;
+  padding: 0;
 }
 
-.Offers a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
 
+.sidebar li{
+  width: 100%;
 
 }
-
-.Booking a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-
-
-}
-
-.about-us a {
-    
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    
- }
- .Contact-Us a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-        
-}
-
-.Login button {
-    margin-top: -10px;
-    width: 150px;
-    padding: 8px 0;
-    outline: none;
-    border: 2px solid #fff;
-    border-radius: 50px ; /*i jep forme ovale butonit*/
-    background: transparent;
-    color: black;
-    float: right;
-    background-color: #ff817e;
-    font-size: 18px;
-    cursor: pointer;
+.sidebar a{
+  width: 100%;
  
+}
+.menu-button{
+  display: none;
+}
+.hideOnMobile .button {
+  margin-top: -10px;
+  width: 150px;
+  padding: 8px 0;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 50px ; /*i jep forme ovale butonit*/
+  background: transparent;
+  color: black;
+  float: right;
+  background-color: #ff817e;
+  font-size: 18px;
+  cursor: pointer;
+
+
 
 }
+ 
 .container {
   display: flex;
   flex-direction: column;

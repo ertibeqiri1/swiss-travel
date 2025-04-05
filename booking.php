@@ -92,43 +92,6 @@ if (isset($_SESSION['welcome_message'])) {
 
 
 </div>
-<div class="name">
-  <p >Swiss Travel</p>
-  </div>
-
-<nav>
-<ul class="sidebar">
-  <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
-  <li><a href="offers.html">Offers</a></li>
-  <li><a href="booking.html">Booking</a></li>
-  <li><a href="aboutUs.php">About Us</a></li>
-  <li><a href="contactus/contactUs.php">Contact Us</a></li>
-
-  <?php if (isset($_SESSION['email'])): ?>
-      <!-- Show Logout button when logged in -->
-      <li><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
-  <?php else: ?>
-      <!-- Show Login/Signup button when NOT logged in -->
-      <li><a href="logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
-  <?php endif; ?>
-</ul>
-
-<ul class="bar">
-  <li><a href="index.html"><img class="logo" src="images/logo.jpg" alt=""></a></li>
-  <li class="hideOnMobile"><a href="offers.html">Offers</a></li>
-  <li class="hideOnMobile"><a href="booking.html">Booking</a></li>
-  <li class="hideOnMobile"><a href="aboutUs.php">About Us</a></li>
-  <li class="hideOnMobile"><a href="contactus/contactUs.php">Contact Us</a></li>
-
-  <?php if (isset($_SESSION['email'])): ?>
-      <li class="hideOnMobile"><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
-  <?php else: ?>
-      <li class="hideOnMobile"><a href="logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
-  <?php endif; ?>
-
-  <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-</ul>
-</nav>
 </section>
 
 <!-- PJESA E "Cancel Flights" -->
@@ -149,42 +112,42 @@ if (isset($_SESSION['welcome_message'])) {
 
 <section class="destinacionet">
    <div class="d1">
-     <a href="bern.html">
+     <a href="bern.php">
         <img src="images/bern.jpg" alt="Bern">
         <h4>Bern</h4>
      </a>
    </div>
  
    <div class="d1">
-     <a href="NewYork.html">
+     <a href="NewYork.php">
         <img src="images/NewYork.jpg" alt=""> 
         <h4>New York</h4> 
      </a>
    </div>
 
     <div class="d1"> 
-      <a href="paris.html">
+      <a href="paris.php">
        <img src="images/paris (1).jpg" alt=""> 
        <h4>Paris</h4> 
       </a> 
     </div>
 
    <div class="d1">
-      <a href="rome.html"> 
+      <a href="rome.php"> 
         <img src="images/rome.jpg" alt="">
         <h4>Rome</h4>
       </a>
    </div>
 
    <div class="d1"> 
-      <a href="sofia.html">
+      <a href="sofia.php">
        <img src="images/sofia.jpg" alt="">
        <h4>Sofia</h4>
       </a> 
    </div>
 
    <div class="d1"> 
-    <a href="madrid.html">
+    <a href="madrid.php">
        <img src="images/Madrid.jpg" alt="">
        <h4>Madrid</h4>
     </a>

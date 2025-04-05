@@ -44,7 +44,7 @@ if (isset($_SESSION['welcome_message'])) {
     </ul>
 
     <ul class="bar">
-        <li><a href="index.html"><img class="logo" src="images/logo.jpg" alt=""></a></li>
+        <li><a href="index.php"><img class="logo" src="images/logo.jpg" alt=""></a></li>
         <li class="hideOnMobile"><a href="offers.php">Offers</a></li>
         <li class="hideOnMobile"><a href="booking.php">Booking</a></li>
         <li class="hideOnMobile"><a href="aboutUs.php">About Us</a></li>
