@@ -10,7 +10,7 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['role'])) {
     exit();
 }
 
-// Optional: restrict to only 'admin' and 'user'
+
 if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'user') {
     echo "<script>
             alert('❌ Unauthorized access!');

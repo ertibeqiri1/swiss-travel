@@ -105,11 +105,11 @@ if (isset($_SESSION['welcome_message'])) {
 
     <!-- PJESA E "Footerit" -->
     <section class="footer">
-      <div class="links">
-        <a  id="ab"  href="aboutUs.html">About</a>
-        <a id="of" href="offers.html">Offers</a>
-        <a id="boo" href="booking.html">Booking</a>
-        <a id="cu" href="contactUs.html">Contact-Us</a>
+            <div class="links">
+              <a  id="ab"  href="../aboutUs.php">About</a>
+              <a id="of" href="../offers.php">Offers</a>
+              <a id="boo" href="../booking.php">Booking</a>
+              <a id="cu" href="../contactus/contactUs.php">Contact-Us</a>
 
       
         
