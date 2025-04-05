@@ -1,5 +1,8 @@
 <?php
 session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: 0");
 
 if (isset($_SESSION['welcome_message'])) {
     echo "<script>alert('" . $_SESSION['welcome_message'] . "');</script>";
@@ -45,7 +48,7 @@ if (isset($_SESSION['welcome_message'])) {
     </ul>
 
     <ul class="bar">
-        <li><a href="index.html"><img class="logo" src="images/logo.jpg" alt=""></a></li>
+        <li><a href="index.php"><img class="logo" src="images/logo.jpg" alt=""></a></li>
         <li class="hideOnMobile"><a href="offers.php">Offers</a></li>
         <li class="hideOnMobile"><a href="booking.php">Booking</a></li>
         <li class="hideOnMobile"><a href="aboutUs.php">About Us</a></li>
@@ -65,6 +68,13 @@ if (isset($_SESSION['welcome_message'])) {
 </nav>
 
 <script>
+    
+  if (performance.navigation.type === 2) {
+    
+    location.reload(true); 
+  }
+
+
     function showSidebar() {
         const sidebar = document.querySelector('.sidebar');
         sidebar.style.display = 'flex';
@@ -88,7 +98,7 @@ if (isset($_SESSION['welcome_message'])) {
                 Book your first dream destination, <br> you want to experience with Swiss Travel!
             </p>
            
-            <a href="booking.html">
+            <a href="booking.php">
             <button class ="redirect1">Book now</button> 
             </a>
 

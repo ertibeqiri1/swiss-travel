@@ -36,11 +36,11 @@ if (isset($_SESSION['welcome_message'])) {
         <li><a href="contactus/contactUs.php">Contact Us</a></li>
 
         <?php if (isset($_SESSION['email'])): ?>
-            <!-- Show Logout button when logged in -->
-            <li><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
+            <!--  Logout  -->
+            <li><a href="../logini/logout.php"><button type="button" class="button">Logout</button></a></li>
         <?php else: ?>
-            <!-- Show Login/Signup button when NOT logged in -->
-            <li><a href="logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
+            <!--  Login-->
+            <li><a href="../logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
         <?php endif; ?>
     </ul>
 
@@ -50,11 +50,13 @@ if (isset($_SESSION['welcome_message'])) {
         <li class="hideOnMobile"><a href="../booking.php">Booking</a></li>
         <li class="hideOnMobile"><a href="../aboutUs.php">About Us</a></li>
         <li class="hideOnMobile"><a href="contactus/contactUs.php">Contact Us</a></li>
-
         <?php if (isset($_SESSION['email'])): ?>
-            <li class="hideOnMobile"><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
+            <?php if ($_SESSION['role'] === 'admin'): ?>
+                <li class="hideOnMobile"><a href="../logini/admin_page.php">Dashboard</button></a></li>
+            <?php endif; ?>
+            <li class="hideOnMobile"><a href="../logini/logout.php"><button type="button" class="button">Logout</button></a></li>
         <?php else: ?>
-            <li class="hideOnMobile"><a href="logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
+            <li class="hideOnMobile"><a href="../logini/login.php"><button type="button" class="button">Login/Signup</button></a></li>
         <?php endif; ?>
 
         <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>

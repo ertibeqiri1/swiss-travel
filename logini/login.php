@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-// Prevent browser caching
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
 
-// If already logged in, redirect to index.php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: 0");
+
+
 if (isset($_SESSION['email'])) {
     header("Location: ../index.php");
     exit();
@@ -19,7 +19,6 @@ $errors = [
 
 $activeForm = $_SESSION['active_form'] ?? 'login';
 
-// Clear session errors after storing them in variables
 unset($_SESSION['login_error']);
 unset($_SESSION['register_error']);
 unset($_SESSION['active_form']);
@@ -32,6 +31,7 @@ function isActiveForm($formName, $activeForm) {
     return $formName === $activeForm ? 'active' : '';
 }
 ?>
+
 
 
 
