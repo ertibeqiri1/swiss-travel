@@ -34,7 +34,7 @@ if (isset($_SESSION['welcome_message'])) {
         <?php if (isset($_SESSION['email'])): ?>
             <?php if ($_SESSION['role'] === 'admin'): ?>
                 <!-- Show Dashboard for Admins -->
-                <li><a href="adminpage.php"><button type="button" class="button">Dashboard</button></a></li>
+                <li><a href="logini/admin_page.php"><button type="button" class="button">Dashboard</button></a></li>
             <?php endif; ?>
             <!-- Show Logout Button when Logged In -->
             <li><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
@@ -53,7 +53,7 @@ if (isset($_SESSION['welcome_message'])) {
 
         <?php if (isset($_SESSION['email'])): ?>
             <?php if ($_SESSION['role'] === 'admin'): ?>
-                <li class="hideOnMobile"><a href="adminpage.php">Dashboard</button></a></li>
+                <li class="hideOnMobile"><a href="logini/admin_page.php">Dashboard</button></a></li>
             <?php endif; ?>
             <li class="hideOnMobile"><a href="logini/logout.php"><button type="button" class="button">Logout</button></a></li>
         <?php else: ?>

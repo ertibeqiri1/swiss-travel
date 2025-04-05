@@ -1,7 +1,8 @@
 
+<?php
+require_once "Reservation.php";
+?>
 
-
-     
    
      <?php
 session_start();
@@ -17,7 +18,7 @@ if (isset($_SESSION['welcome_message'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiss Travel</title>
-    <link rel="stylesheet" href="BookNY.css">
+    <link rel="stylesheet" href="BookParis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    
 </head>
@@ -61,6 +62,35 @@ if (isset($_SESSION['welcome_message'])) {
     <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
 </ul>
 </nav>
+
+ 
+
+
+
+<div class="container">
+    <?php if (isset($_SESSION['email']) && in_array($_SESSION['role'], ['admin', 'user'])): ?>
+        <form action="create.php" method="post">
+            <h1>Make a Reservation</h1>
+
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="surname" placeholder="Surname" required>
+            <input type="email" name="email" placeholder="Email" 
+                value="<?php echo ($_SESSION['role'] == 'user') ? htmlspecialchars($_SESSION['email']) : ''; ?>"
+                <?php echo ($_SESSION['role'] == 'user') ? 'readonly' : ''; ?> required>
+
+            <input type="date" name="reservation_date" required>
+            <input type="text" name="credit_card" placeholder="Credit Card" required>
+            <button type="submit">Book Now</button>
+        </form>
+    <?php else: ?>
+      <div class="login-reminder">
+    ⚠️ You must be <a href="../logini/login.php">logged in</a> to make a reservation.
+</div>
+
+
+    <?php endif; ?>
+</div>
+
 
 
   

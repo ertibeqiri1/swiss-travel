@@ -1,4 +1,10 @@
+
 <?php
+require_once "Reservation.php";
+?>
+
+   
+     <?php
 session_start();
 
 if (isset($_SESSION['welcome_message'])) {
@@ -26,10 +32,10 @@ if (isset($_SESSION['welcome_message'])) {
     <nav>
 <ul class="sidebar">
     <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
-    <li><a href="../offers.php">Offers</a></li>
-    <li><a href="../booking.php">Booking</a></li>
-    <li><a href="../aboutUs.php">About Us</a></li>
-    <li><a href="../contactus/contactUs.php">Contact Us</a></li>
+    <li><a href="offers.php">Offers</a></li>
+    <li><a href="booking.php">Booking</a></li>
+    <li><a href="aboutUs.php">About Us</a></li>
+    <li><a href="contactus/contactUs.php">Contact Us</a></li>
 
     <?php if (isset($_SESSION['email'])): ?>
         <!-- Show Logout button when logged in -->
@@ -57,18 +63,34 @@ if (isset($_SESSION['welcome_message'])) {
 </ul>
 </nav>
 
-  
-  <div class="container">
-    <form action="create.php" method="post">
-    <h1>Make a Reservation</h1>
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="text" name="surname" placeholder="Surname" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="date" name="reservation_date" required>
-        <input type="text" name="credit_card" placeholder="Credit Card" required>
-        <button type="submit">Book Now</button>
-    </form>
-    </div>
+ 
+
+
+
+<div class="container">
+    <?php if (isset($_SESSION['email']) && in_array($_SESSION['role'], ['admin', 'user'])): ?>
+        <form action="create.php" method="post">
+            <h1>Make a Reservation</h1>
+
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="surname" placeholder="Surname" required>
+            <input type="email" name="email" placeholder="Email" 
+                value="<?php echo ($_SESSION['role'] == 'user') ? htmlspecialchars($_SESSION['email']) : ''; ?>"
+                <?php echo ($_SESSION['role'] == 'user') ? 'readonly' : ''; ?> required>
+
+            <input type="date" name="reservation_date" required>
+            <input type="text" name="credit_card" placeholder="Credit Card" required>
+            <button type="submit">Book Now</button>
+        </form>
+    <?php else: ?>
+      <div class="login-reminder">
+    ⚠️ You must be <a href="../logini/login.php">logged in</a> to make a reservation.
+</div>
+
+
+    <?php endif; ?>
+</div>
+
 
 
 

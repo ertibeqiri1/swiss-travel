@@ -393,3 +393,20 @@ form button:hover {
   margin-bottom: 50px;
      
 }
+.login-reminder {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  background-color: #ff7c7c; /* Light yellow */
+  border: 1px solid #fa4e30;
+  border-radius: 10px;
+  color: #fff; /* Brown text for visibility */
+}
+
+.login-reminder a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}

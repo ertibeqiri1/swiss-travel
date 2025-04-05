@@ -41,7 +41,7 @@ $data = $reservation->getAll();
     </table>
 
     <br>
-    <a href="../booking.html">➕ Make a New Reservation</a>
+    <a href="BookParis.php">➕ Make a New Reservation</a>
 
 </body>
 </html>
